@@ -21,26 +21,22 @@ custom_cmap = plt.cm.colors.LinearSegmentedColormap.from_list(cmap_name, colors,
 def generic(patient):
     fig, ax = plt.subplots(figsize=(5, 1))
 
-    # Create a horizontal bar-like chart
     bars = [(lwst, bgst - lwst), (patient, 0.1)]
-
-    # Draw the gradient background using the custom colormap
-    ax.imshow(np.arange(0, lwst + bgst + 1).reshape(1, -1), cmap=custom_cmap, aspect='auto', extent=[0, lwst + bgst, 0, 1])
-
-    # Draw the bars with custom markers
     ax.broken_barh(bars, (0, 1), facecolors = "None")
-
-    # Set the x-axis limits
     ax.set_xlim(abs(lwst - constant), bgst + constant)
-    ax.tick_params(direction='out', pad=-47, grid_alpha = 1)
-    # Remove y-axis ticks and labels
-    ax.yaxis.set_ticklabels([])
     
-    # Set custom x-axis labels
+    #Labels
+    ax.yaxis.set_ticklabels([])
     ax.set_xticks([lwst, bgst, patient])
+    ax.tick_params(direction='out', pad=-47, grid_alpha = 1)
     ax.set_xticklabels([keylwst[-1] + str(lwst), keybgst[-1] + str(bgst), str(patient)], rotation="vertical")
+    
     ax.get_xticklabels()[0].set_horizontalalignment('right')
     ax.get_xticklabels()[1].set_horizontalalignment('left')
+    
+    #Aesthetic
+    ax.imshow(np.arange(0, lwst + bgst + 1).reshape(1, -1), cmap=custom_cmap, aspect='auto', extent=[0, lwst + bgst, 0, 1])
+    ax.add_patch(plt.Rectangle((0,0), bgst + constant, 1, fill=False, edgecolor='black', linewidth=2))
 
     plt.grid(False)
     plt.show()

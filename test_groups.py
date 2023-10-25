@@ -3,30 +3,30 @@ tests = ["nmr_lipoporotein_profili","ldl_alt_fraksi̇yonları","aterojeni̇k_li�
             "li̇poprotei̇n_kolestrol_esteri̇fi̇kasyonu"]
 
 nmr_lipoporotein_profili = {
-    "trigliserid": {"optimal düzey": ["<",150], 
-                    "artmış kardiovasküler hastalık riski":[">",150]},
-    "kolestrol, total": {"optimal düzey": ["<",200],
-                        "artmış kardiovasküler hastalık riski":[">",200]},
-    "kolestrol, ldl": {"kardiyovasküler hastalığı olanlarda optimal düzey": ["<",70],
-                        "kardiyovasküler hastalığı olmayanlarda optimal düzey": ["<",100],
-                        "artmış kardiovasküler hastalık riski":[">",130]},
-    "kolestrol, hdl": {"optimal düzey": ["<",50],
-                        "artmış kardiovasküler hastalık riski":[">",50] },
-    "kolestrol, ldl/ kolestrol, hdl oranı": {"optimal düzey": ["<",2],
-                                            "artmış kardiovasküler hastalık riski":[">",5]},
+    "trigliserid": {"optimal düzey <":15, 
+                    "artmış kardiovasküler hastalık riski >":15},
+    "kolestrol, total": {"optimal düzey <":20,
+                        "artmış kardiovasküler hastalık riski >":20},
+    "kolestrol, ldl": {"kardiyovasküler hastalığı olanlarda optimal düzey <":7,
+                        "kardiyovasküler hastalığı olmayanlarda optimal düzey <":10,
+                        "artmış kardiovasküler hastalık riski >":13},
+    "kolestrol, hdl": {"optimal düzey <":5,
+                        "artmış kardiovasküler hastalık riski >":5 },
+    "kolestrol, ldl/ kolestrol, hdl oranı": {"optimal düzey <":2,
+                                            "artmış kardiovasküler hastalık riski >":5},
     "apolipoprotein a1": None,
     "apolipoprotein a2": None,
     "apolipoprotein b100": None,
-    "apo-b100 / apo-a1 oranı": {"optimal düzey": ["<",0.6],
-                                "artmış kardiovasküler hastalık riski":[">",0.8]},
-    "total apob taşıyan partikül sayısı, total apob-p": {"optimal düzey": ["<",1400],
-                                                        "artmış kardiovasküler hastalık riski":[">",2000]},
-    "ldl partikül sayısı, ldl-p": {"optimal düzey": ["<",1000],
-                                    "artmış kardiovasküler hastalık riski":[">",1300]},
-    "idl partikül sayısı, idl-p": {"optimal düzey": ["<",70],
-                                    "artmış kardiovasküler hastalık riski":[">",100]},
-    "vldl partikül sayısı, vldl-p": {"optimal düzey": ["<",120],
-                                    "artmış kardiovasküler hastalık riski":[">",180]}
+    "apo-b100 / apo-a1 oranı": {"optimal düzey <":0.6,
+                                "artmış kardiovasküler hastalık riski >":0.8},
+    "total apob taşıyan partikül sayısı, total apob-p": {"optimal düzey <":140,
+                                                        "artmış kardiovasküler hastalık riski >":200},
+    "ldl partikül sayısı, ldl-p": {"optimal düzey <":100,
+                                    "artmış kardiovasküler hastalık riski >":130},
+    "idl partikül sayısı, idl-p": {"optimal düzey <":7,
+                                    "artmış kardiovasküler hastalık riski >":10},
+    "vldl partikül sayısı, vldl-p": {"optimal düzey <":12,
+                                    "artmış kardiovasküler hastalık riski >":18}
 }
 
 ldl_alt_fraksi̇yonları = {
@@ -45,26 +45,26 @@ ldl_alt_fraksi̇yonları = {
 }
 
 aterojeni̇k_li̇poprotei̇nlerde_apo_b100_ve_tri̇gli̇seri̇d = {
-    "ldl-apo-b100": {"optimal düzey": ["<",70],
-                    "artmış kardiovasküler hastalık riski":[">",100]},
-    "idl-apo-b100": {"optimal düzey": ["<",4],
-                    "artmış kardiovasküler hastalık riski":[">",6]},
-    "vldl-apo-b100": {"optimal düzey": ["<",6],
-                    "artmış kardiovasküler hastalık riski":[">",10]},
-    "ldl-trigliserid": {"optimal düzey": ["<",24],
-                    "artmış kardiovasküler hastalık riski":[">",28]},
-    "idl-trigliserid": {"optimal düzey": ["<",6],
-                    "artmış kardiovasküler hastalık riski":[">",10]},
-    "vldl-trigliserid": {"optimal düzey": ["<",60],
-                    "artmış kardiovasküler hastalık riski":[">",90]}
+    "ldl-apo-b100": {"optimal düzey <":7,
+                    "artmış kardiovasküler hastalık riski >":10},
+    "idl-apo-b100": {"optimal düzey <":4,
+                    "artmış kardiovasküler hastalık riski >":6},
+    "vldl-apo-b100": {"optimal düzey <":6,
+                    "artmış kardiovasküler hastalık riski >":1},
+    "ldl-trigliserid": {"optimal düzey <":24,
+                    "artmış kardiovasküler hastalık riski >":28},
+    "idl-trigliserid": {"optimal düzey <":6,
+                    "artmış kardiovasküler hastalık riski >":1},
+    "vldl-trigliserid": {"optimal düzey <":6,
+                    "artmış kardiovasküler hastalık riski >":9}
 }
 
 li̇poprotei̇n_kolestrol_esteri̇fi̇kasyonu = {
     "ldl serbest kolestrol": None,
     "hdl serbest kolestrol": None,
-    "ldl-serbest kolestrol / ldl-kolestrol": {"optimal düzey": ["<",0.5],
+    "ldl-serbest kolestrol / ldl-kolestrol": {"optimal düzey <":0.5,
                                             "artmış kardiovasküler hastalık riski":[">=",0.5]},
-    "hdl-serbest kolestrol / hdl-kolestrol": {"optimal düzey": ["<",0.5],
+    "hdl-serbest kolestrol / hdl-kolestrol": {"optimal düzey <":0.5,
                                             "artmış kardiovasküler hastalık riski":[">=",0.5]}
 }
 

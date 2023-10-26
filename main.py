@@ -9,6 +9,10 @@ def main():
     #data = data.drop(columns= "Referans Değer")
     DataPrep(data)
 
+    for test in Tests:
+        if CTestGExists(test.name):
+            Director(test)  
+
 class PrepTests:
     """ Save testname and make a dataframe of test results.
     """
@@ -60,13 +64,13 @@ def CTestExists(Group, test):
     #Take class.name as Group and df["Test Adı"] as test and check test' existence in Group in test_groups
     #given_tg_name = Group.lower().replace(" ", "_")
     given_test = test.lower()
-    
+    test_dict = TG.Lead(Group.lower())
     try: 
-        test_dict = TG.Lead(given_test)
-        return test_dict
+        given_test in test_dict.keys()
     except:
         print(f"{test} is not in tests library.")
         return False
+    return True
 
 def CUnit(test, birim):
     #Take data.loc[data["Test Adı"] == "Trigliserid", "Birim"] as given Unit and check test_groups equivalance
@@ -113,9 +117,10 @@ def CRef(Group, test, references):
     if refexists is not None:
         try:
             refexists == givenref
-            return True
         except:
             print(f"Reference of {test} is different than known reference for this test.")
+            return False
+        return True
     else:
         print(f"No reference found for test: {test}")
         return False
@@ -130,9 +135,21 @@ Give information of:
 
 to plotting.py
 """
+def Director(CClass):
+    GroupName = CClass.name
+    df = CClass.df
+    testnames = df["Test Adı"]
+    fp = open(f'{GroupName}.txt',"w")
 
+    for testname in testnames:
+        references = df.loc[df["Test Adı"] == testname, "Referans Değerleri"]
+        birim = df.loc[df["Test Adı"] == testname, "Birim"]
+        pvalue = df.loc[df["Test Adı"] == testname, "Sonuç"]
 
+        if CTestExists(GroupName, testname) and CUnit(testname, birim) and CRef(GroupName, testname, references):
+            fp.write(testname+" "+ pvalue +"\n")
+            TG.Leader(GroupName, testname, pvalue, fp)
+        
 
-#Main
 main()
     

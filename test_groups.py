@@ -1,13 +1,3 @@
-
-"""def Checks(lists):
-    if lists == tests:
-        return ["nmr_lipoporotein_profili","ldl_alt_fraksi̇yonları","aterojeni̇k_li̇poprotei̇nlerde_apo_b100_ve_tri̇gli̇seri̇d",
-            "li̇poprotei̇n_kolestrol_esteri̇fi̇kasyonu"]
-    elif lists == nits:
-
-
-"""
-
 tests = ["nmr_lipoporotein_profili","ldl_alt_fraksi̇yonları","aterojeni̇k_li̇poprotei̇nlerde_apo_b100_ve_tri̇gli̇seri̇d",
             "li̇poprotei̇n_kolestrol_esteri̇fi̇kasyonu"]
 

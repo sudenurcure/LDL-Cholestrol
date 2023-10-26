@@ -83,9 +83,9 @@ LKE = {
     "ldl serbest kolestrol": None,
     "hdl serbest kolestrol": None,
     "ldl-serbest kolestrol / ldl-kolestrol": {"optimal düzey <":0.5,
-                                            "artmış kardiovasküler hastalık riski":[">=",0.5]},
+                                            "artmış kardiovasküler hastalık riski >=": 0.5},
     "hdl-serbest kolestrol / hdl-kolestrol": {"optimal düzey <":0.5,
-                                            "artmış kardiovasküler hastalık riski":[">=",0.5]}
+                                            "artmış kardiovasküler hastalık riski >=": 0.5}
 }
 
 def Lead(group_name):

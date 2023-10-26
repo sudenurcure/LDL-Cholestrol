@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 import test_groups as TG
 
 Tests = []
@@ -57,26 +58,67 @@ def CTestGExists(Test):
 
 def CTestExists(Group, test):
     #Take class.name as Group and df["Test Adı"] as test and check test' existence in Group in test_groups
-    given_tg_name = Group.lower().replace(" ", "_")
-    given_test = test.lower().replace(" ", "_")
+    #given_tg_name = Group.lower().replace(" ", "_")
+    given_test = test.lower()
     
     try: 
         test_dict = TG.Lead(given_test)
         return test_dict
     except:
         print(f"{test} is not in tests library.")
+        return False
 
-def CUnit():
-    #Take df["Test Adı"]["Birim"] as given Unit and check test_groups equivalance
-    
-    return 
+def CUnit(test, birim):
+    #Take data.loc[data["Test Adı"] == "Trigliserid", "Birim"] as given Unit and check test_groups equivalance
+    empty = ["ldl serbest kolestrol","hdl serbest kolestrol",
+             "ldl-serbest kolestrol / ldl-kolestrol",
+             "hdl-serbest kolestrol / hdl-kolestrol"]
+    given_test = test.lower()
 
-def CRef(Test):
-    #Take df["Test Adı"]["Referans Değer"] as given Reference and check test_groups equivalance 
+    if given_test in empty:
+        return False
+
+    if birim == "mg/dL":
+        if not given_test in TG.units["mg/dL"]:
+            print(f"{test} has a wrong unit.")
+            return False
+    elif birim == "nmol/L":
+        if not given_test in TG.units["nmol/L"]:
+            print(f"{test} has a wrong unit.")
+            return False
+    return True 
+
+def CRef(Group, test, references):
+    #Take data.loc[data["Test Adı"] == "Trigliserid", "Referans Değer"] as given Reference and check test_groups equivalance 
     """
     data.loc[data["Test Adı"] == "Trigliserid", "Referans Değer"]
     """
-    return
+    givenref = {}
+
+    references= references.lower()
+    string_parts = re.split(r'([<>]=?)', references)
+    string_parts = [s.strip() for s in string_parts if s.strip()]
+    
+    for x in range(0, len(string_parts)):
+        if x%2 == 0:
+            numeric_pattern = r'[-+]?\d*\.\d+|\d+'
+            mainstr = string_parts[x+1]
+            numerical_values = re.findall(numeric_pattern, mainstr)
+            numerical_values = [int(num) if num.isnumeric() else float(num) for num in numerical_values]
+            mainstr = re.sub(numeric_pattern, '', mainstr).strip() + " " +string_parts[x]
+            givenref[mainstr] = numerical_values[0]
+
+    #compare givenref  with the test_group now
+    refexists = TG.Lead(Group).get(test, None)
+    if refexists is not None:
+        try:
+            refexists == givenref
+            return True
+        except:
+            print(f"Reference of {test} is different than known reference for this test.")
+    else:
+        print(f"No reference found for test: {test}")
+        return False
 
 
 #Prep Chart

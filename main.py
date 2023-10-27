@@ -1,14 +1,15 @@
 import pandas as pd
 import re
 import test_groups as TG
+import sort_fp as SFP
 
 Tests = []
 
 def main():
     data = pd.read_excel("Sample.xlsx", header=0)
-    #data = data.drop(columns= "Referans Değer")
     DataPrep(data)
-
+    df = WorkingData(data)
+    # Make the first control for test group's existence then direct it
     for test in Tests:
         if CTestGExists(test.name):
             Director(test)  
@@ -28,6 +29,10 @@ class PrepTests:
             df = pd.DataFrame()
             return df
         
+def WorkingData(data):
+    df = data.drop(isinstance(data["Sonuç"], str))
+    return df
+
 def DataPrep(data):
     for index, element in data.iterrows():
         strings = 0
@@ -35,7 +40,6 @@ def DataPrep(data):
             strings += 1
             tn = f"Test {element['Test Adı']}"
             tablename = element['Test Adı']
-            #tablename= data.iloc[index,0]
             tn =  PrepTests(tablename)
             Tests.append(tn)
         else:
@@ -135,11 +139,10 @@ Give information of:
 
 to plotting.py
 """
-def Director(CClass):
-    GroupName = CClass.name
-    df = CClass.df
+def Director(test_class):
+    GroupName = test_class.name
+    df = test_class.df
     testnames = df["Test Adı"]
-    fp = open(f'{GroupName}.txt',"w")
 
     for testname in testnames:
         references = df.loc[df["Test Adı"] == testname, "Referans Değerleri"]
@@ -147,8 +150,7 @@ def Director(CClass):
         pvalue = df.loc[df["Test Adı"] == testname, "Sonuç"]
 
         if CTestExists(GroupName, testname) and CUnit(testname, birim) and CRef(GroupName, testname, references):
-            fp.write(testname+" "+ pvalue +"\n")
-            TG.Leader(GroupName, testname, pvalue, fp)
+            SFP.Sorter(GroupName, testname, pvalue)
         
 
 main()

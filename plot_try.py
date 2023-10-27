@@ -1,12 +1,8 @@
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
-import io 
-import os
 import test_groups as TG
 import seaborn as sns
-from docx import Document
-
 
 # Set the custom colormap
 cmap_colors = [(0.0000001, 0.3, 0), (0.95, 0.95, 0), (5, 0, 0)]
@@ -14,16 +10,7 @@ cmap = mcolors.LinearSegmentedColormap.from_list("custom_color_map", cmap_colors
 
 sns.set()
 
-def create_date_folder(group_name):
-    folder_name = group_name
-    folder_path = os.path.join("Tüm Belgeler", folder_name)
-
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-
-    return folder_path
-
-def tk_chart(patient, lwst, bgst, constant, keylwst, keybgst, test_name):
+def tk_chart(patient, lwst, bgst, constant, keylwst, keybgst, document):
     fig, ax = plt.subplots(figsize=(5, 1))
 
     bars = [(lwst, bgst - lwst), (patient, 0.1)]
@@ -46,16 +33,13 @@ def tk_chart(patient, lwst, bgst, constant, keylwst, keybgst, test_name):
     
     ax.add_patch(plt.Rectangle((0, 0), bgst + constant, 1, fill=False, edgecolor='black', linewidth=2))
     
-
     plt.grid(False)
+    plt.savefig(document, format="png")
 
-    return plt
-
-def e_chart(patient, limit, constant, keylwst, keybgst, test_name):
+def e_chart(patient, limit, constant, keylwst, keybgst, document):
     fig, ax = plt.subplots(figsize=(5, 1))
 
     bars = [(patient, 0.1)]
-    #(lwst, bgst - lwst), 
     ax.broken_barh(bars, (0, 1), facecolors="None")
     
     ax.set_xlim(abs(limit - constant), limit + constant)
@@ -76,13 +60,9 @@ def e_chart(patient, limit, constant, keylwst, keybgst, test_name):
     ax.add_patch(plt.Rectangle((0, 0), limit + constant, 1, fill=False, edgecolor='black', linewidth=2))
     
     plt.grid(False)
-    plot_bytes = io.BytesIO()  # Create a BytesIO buffer to save the plot
-    plt.savefig(plot_bytes, format="png")  # Save the plot as bytes
+    plt.savefig(document, format="png")
 
-    # Write the bytes to the document
-    document.write(plot_bytes.getvalue())
-
-def b_chart(patient, lwst, opt, bgst, keylwst, keybgst, test_name,  *extra_limits):
+def b_chart(patient, lwst, opt, bgst, *extra_limits, document):
     fig, ax = plt.subplots(figsize=(5, 1))
 
     # Ensure there are at least three limits
@@ -120,40 +100,27 @@ def b_chart(patient, lwst, opt, bgst, keylwst, keybgst, test_name,  *extra_limit
     plt.grid(False)
     plt.savefig(document, format="png")
 
-def decision(patient,lwst, bgst, constant, keylwst, keybgst, keyc, test_name, *extra_limits):
+def decision(patient, lwst, bgst, constant, keylwst, keybgst, keyc, document, *extra_limits):
     if lwst == bgst:
-    #send to one seperation onew < | onew >
-        plt = e_chart(patient, lwst, constant, keylwst, keybgst, test_name)
-        chart_file = f"{test_name}.png"
-        plt.savefig(os.path.join(folder_path, chart_file), bbox_inches="tight")
+        e_chart(patient, lwst, constant, keylwst, keybgst, document)
     elif keyc == 2:
-        # send to two seperation onew < | middle | onew >
-        # done
-        tk_chart(patient, lwst, bgst, constant, keylwst, keybgst, test_name)
+        tk_chart(patient, lwst, bgst, constant, keylwst, keybgst, document)
     elif keyc > 2:
-        # send to more than two seperation onew < and value == lwst |  | | one w > and value == bgst
-        b_chart(patient, lwst, opt, bgst, constant, keylwst, keybgst, test_name, *extra_limits)
+        b_chart(patient, lwst, bgst, constant, *extra_limits, document)
 
-def Leader(group_name, test_name, patient_val):
+def Leader(group_name, test_name, patient_val, document, *extra_limits):
     test = TG.Lead(group_name)[test_name]
     keyc = len(test)
     lwst, bgst, keylwst, keybgst = float('inf'), 0, "", ""
-    # keys for lwst and bgst isnt distinct when lwst == bgst
+    
     for key, value in test.items():
         if value < lwst:
             lwst, keylwst = value, key
         if value > bgst:
             bgst, keybgst = value, key
-    # const == 0 for lwst == biggest, fix it
+    
     constant = 2 * (abs(lwst - bgst)) / 3
     
-    decision(patient_val ,lwst, bgst, constant, keylwst, keybgst, keyc, test_name, *extra_limits)
-
-def create_or_open_docx(docx_file):
-    doc = Document()
-    if docx_file and os.path.exists(docx_file):
-        doc = Document(docx_file)
-    doc.save(docx_file)
+    decision(patient_val ,lwst, bgst, constant, keylwst, keybgst, keyc, document, *extra_limits)
 
 
-Leader("nmr_lipoporotein_profili", "trigliserid", 17)

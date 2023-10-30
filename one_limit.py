@@ -1,49 +1,46 @@
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import numpy as np
-import seaborn as sns
 
-cmap_colors = [(0.0000001, 0.3, 0), (0.95, 0.95, 0), (5, 0, 0)]
-cmap = mcolors.LinearSegmentedColormap.from_list("custom_color_map", cmap_colors, N=10000)
+def one_limit(patient, ref, keylwst, keybgst, constant):
+    x_min = ref - constant
+    x_max = ref + constant
 
-sns.set()
+    x = np.linspace(x_min, x_max, 1000)
+    y = np.ones(1000)
 
-def e_chart(patient, ref, keylwst, keybgst, constant):
-    fig, ax = plt.subplots(figsize=(5, 1))
+    # Adjust the x-axis limits if the patient value is outside the range
+    if patient < x_min:
+        x_min = patient - constant
+    if patient > x_max:
+        x_max = patient + constant
 
-    bars = [(ref, 0.1),(patient, 0.1)]
-    ax.broken_barh(bars, (0, 1), facecolors = "None")
-    #, edgecolors = "purple"
-    
-    ax.set_xlim(abs(ref - constant), ref + constant)
-    
-    ax.yaxis.set_ticklabels([])
-    
-    x_ticks = [ref, ref, patient]
-    x_labels = [f"{keylwst}{ref}", f"{keybgst}{ref}", str(patient)]
+    # Creating a gradient background from lowest to highest x, changing at the reference point
+    range_values = (x - x_min) / (x_max - x_min)
+    range_values = range_values.reshape(1, -1)  # Reshaping for broadcasting
 
-    """ax.text(x=x1 + x2/2, 
-                    y=i,
-                    s=r[1]["Event"].values[0], 
-                    ha='center', 
-                    va='center',
-                    color='white',
-                   )"""
+    plt.figure(figsize=(6, 1))
+
+    plt.imshow(range_values, cmap='RdYlGn_r', aspect='auto', extent=[x_min, x_max, 0, 1], alpha=0.7)
+    plt.plot(x, y, color='black')
+
+    plt.gca().get_yaxis().set_visible(False)
+
+    tick_labels = [keylwst, keybgst]
+
+    plt.axvline(x=ref, color='black', linestyle='--', linewidth=1)
+
+    plt.text(ref - 3, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)
+    plt.text(ref + 3, 0.5, keybgst, rotation=-90, ha='center', va='center', fontsize=8)
+
+    # Constant value
+    custom_value = max(x_min, min(patient, x_max))
+    plt.axvline(x=custom_value, color='red', linestyle='-', linewidth=2)
     
-    ax.set_xticks(x_ticks)
-    ax.set_xticklabels(x_labels, rotation="vertical")
-    
-    ax.get_xticklabels()[0].set_horizontalalignment('right')
-    ax.get_xticklabels()[1].set_horizontalalignment('left')
-    
-    ax.imshow(np.arange(0, 2*ref + 1).reshape(1, -1), cmap=cmap, aspect='auto', extent=[0, 2*ref, 0, 1])
-    
-    plt.grid(False)
-    return fig
+    return plt
 
 def trial():
     constant = (3.5*150)/7
-    fig = e_chart(170, 150, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
+    fig = one_limit(170, 150, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
     plot_file = 'one.png'
     group_name = "Trial"
     from save_plot import insert_plot as IP

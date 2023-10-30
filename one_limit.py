@@ -25,8 +25,6 @@ def one_limit(patient, ref, keylwst, keybgst, constant):
 
     plt.gca().get_yaxis().set_visible(False)
 
-    tick_labels = [keylwst, keybgst]
-
     plt.axvline(x=ref, color='black', linestyle='--', linewidth=1)
 
     plt.text(ref - 3, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)

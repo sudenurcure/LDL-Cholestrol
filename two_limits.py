@@ -31,10 +31,8 @@ def two_limits(patient, lwst, bgst, keylwst, keybgst, constant):
 
     for limit, label in zip(limits, tick_labels):
         plt.axvline(x=limit, color='black', linestyle='--', linewidth=1)
-        if limit == lwst:
-            plt.text(limit - 0.2, 0.5, label, rotation=90, ha='center', va='center', fontsize=8)
-        else:
-            plt.text(limit + 0.2, 0.5, label, rotation=-90, ha='center', va='center', fontsize=8)
+        plt.text(limit - 0.2, 0.5, label, rotation=90, ha='center', va='center', fontsize=8)
+
 
     # Constant value
     custom_value = max(x_min, min(patient, x_max))

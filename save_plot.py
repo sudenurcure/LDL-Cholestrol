@@ -12,4 +12,4 @@ def create_date_folder(group_name):
 
 def insert_plot(group_name, plot_file, fig):
     folder_path = create_date_folder(group_name)
-    fig.savefig(os.path.join(folder_path, plot_file))
+    fig.savefig(os.path.join(folder_path, plot_file),bbox_inches='tight', dpi=300)

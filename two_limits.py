@@ -15,7 +15,7 @@ def tk_chart(patient, lwst, bgst, keylwst, keybgst, constant):
     bars = [(lwst, bgst - lwst), (patient, 0.1)]
     ax.broken_barh(bars, (0, 1), facecolors="None")
     
-    ax.set_xlim(abs(lwst - constant), bgst + constant)
+    ax.set_xlim(lwst - constant, bgst + constant)
     
     ax.yaxis.set_ticklabels([])
     

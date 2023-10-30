@@ -12,11 +12,11 @@ sns.set()
 def b_chart(patient, lwst, bgst, keylwst, keybgst, constant, *extra_limits,):
     fig, ax = plt.subplots(figsize=(5, 1))
 
-    bars = [(patient,0.1), (lwst, bgst - lwst)]
+    bars = [(patient,bgst-patient), (lwst, bgst - lwst)]
 
     for extra in extra_limits:
         for values in extra.values():
-            bars = bars + [(values, 0.1)]
+            bars = bars + [(values, bgst-values)]
 
 
     ax.broken_barh(bars, (0, 1), facecolors="None")
@@ -25,7 +25,8 @@ def b_chart(patient, lwst, bgst, keylwst, keybgst, constant, *extra_limits,):
     ax.yaxis.set_ticklabels([])
     
     x_ticks = [lwst, bgst, patient] + [values for values in (values for extra in extra_limits for values in extra.values())]
-    x_labels = [keylwst, keybgst, patient]+[f"{limit}" for limit in (keys for extra in extra_limits for keys in extra.values())]
+    x_labels = [keylwst, keybgst, str(patient)] + [f"{limit}" for limit in (values for extra in extra_limits for values in extra.values())]
+
     
     ax.set_xticks(x_ticks)
     ax.set_xticklabels(x_labels, rotation="vertical")

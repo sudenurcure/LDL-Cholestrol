@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def two_limits(patient, lwst, bgst, keylwst, keybgst, constant):
+def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
     x_min = min(lwst, bgst) - constant
     x_max = max(lwst, bgst) + constant
 
@@ -41,10 +41,10 @@ def two_limits(patient, lwst, bgst, keylwst, keybgst, constant):
 
 def trial():
     constant = 2 * (abs(5 - 10)) / 3
-    fig = two_limits(7, 5, 10, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
+    fig = t_chart(7, 5, 10, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
     plot_file = 'two.png'
     group_name = "Trial"
     from save_plot import insert_plot as IP
     IP(group_name, plot_file, fig)
 
-trial()
+#trial()

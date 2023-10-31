@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def one_limit(patient, ref, keylwst, keybgst, constant):
+def o_chart(patient, ref, keylwst, keybgst, constant):
     x_min = ref - constant
     x_max = ref + constant
 
@@ -38,10 +38,10 @@ def one_limit(patient, ref, keylwst, keybgst, constant):
 
 def trial():
     constant = (3.5*150)/7
-    fig = one_limit(170, 150, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
+    fig = o_chart(170, 150, "optimal düzey <", "artmış kardiovasküler hastalık riski >", constant)
     plot_file = 'one.png'
     group_name = "Trial"
     from save_plot import insert_plot as IP
     IP(group_name, plot_file, fig)
 
-trial()
+#trial()

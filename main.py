@@ -22,7 +22,6 @@ def main():
     data['Sonuç'] = pd.to_numeric(data['Sonuç'], errors='coerce')
 
     DataPrep(data)
-    df = WorkingData(data)
     # Make the first control for test group's existence then direct it
     for test in Tests:
         if CTestGExists(test.name):
@@ -45,9 +44,7 @@ class PrepTests:
             df = pd.DataFrame()
             return df
         
-def WorkingData(data):
-    df = data.dropna(subset=['Sonuç'])
-    return df
+
 
 def DataPrep(data):
     for index, element in data.iterrows():

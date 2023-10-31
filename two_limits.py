@@ -31,7 +31,7 @@ def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
 
     for limit, label in zip(limits, tick_labels):
         plt.axvline(x=limit, color='black', linestyle='--', linewidth=1)
-        plt.text(limit - 0.2, 0.5, label, rotation=90, ha='center', va='center', fontsize=8)
+        plt.text(limit - constant/10, 0.5, label, rotation=90, ha='center', va='center', fontsize=8)
 
 
     # Constant value

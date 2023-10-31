@@ -27,8 +27,8 @@ def o_chart(patient, ref, keylwst, keybgst, constant):
 
     plt.axvline(x=ref, color='black', linestyle='--', linewidth=1)
 
-    plt.text(ref - 3, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)
-    plt.text(ref + 3, 0.5, keybgst, rotation=-90, ha='center', va='center', fontsize=8)
+    plt.text(ref - constant/10, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)
+    plt.text(ref + constant/10, 0.5, keybgst, rotation=-90, ha='center', va='center', fontsize=8)
 
     # Constant value
     custom_value = max(x_min, min(patient, x_max))

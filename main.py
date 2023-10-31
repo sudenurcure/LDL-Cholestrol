@@ -4,8 +4,6 @@ import re
 import test_groups as TG
 import sort_fp as SFP
 
-
-
 # Ignore FutureWarning for using float on a single-element Series
 warnings.simplefilter(action='ignore', category=FutureWarning)
 

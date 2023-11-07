@@ -3,6 +3,7 @@ import warnings
 import re
 import test_groups as TG
 import sort_fp as SFP
+from worder import WordPreparation
 
 # Ignore FutureWarning for using float on a single-element Series
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -173,7 +174,8 @@ def Director(test_class):
         pvalue = float(pvalue)
         if CTestExists(GroupName, testname) and CUnit(testname, birim) and CRef(GroupName, testname, references):
             SFP.Sorter(GroupName, testname, pvalue)
-        
+    
+    WordPreparation.generate_word(GroupName)
 
 main()
     

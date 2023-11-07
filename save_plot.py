@@ -3,7 +3,7 @@ import matplotlib
 
 def create_date_folder(group_name):
     folder_name = group_name
-    folder_path = os.path.join("Tüm Belgeler", folder_name)
+    folder_path = os.path.join("all_files", folder_name)
 
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)

@@ -1,17 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
-def o_chart(patient, ref, keylwst, keybgst, constant):
-    x_min = ref - constant
-    x_max = ref + constant
-
+# One box look
+def o_chart(patient, ref, constant):
+    
     x = np.linspace(x_min, x_max, 1000)
     y = np.ones(1000)
 
     # Adjust the x-axis limits if the patient value is outside the range
-    if patient < x_min:
+    if patient < ref:
         x_min = patient - constant
-    if patient > x_max:
+    if patient > ref:
         x_max = patient + constant
 
     # Creating a gradient background from lowest to highest x, changing at the reference point
@@ -25,10 +23,10 @@ def o_chart(patient, ref, keylwst, keybgst, constant):
 
     plt.gca().get_yaxis().set_visible(False)
 
-    plt.axvline(x=ref, color='black', linestyle='--', linewidth=1)
+    plt.axvline(x=ref, color='black', linestyle='-', linewidth=2)
 
-    plt.text(ref - constant/10, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)
-    plt.text(ref + constant/10, 0.5, keybgst, rotation=-90, ha='center', va='center', fontsize=8)
+    #plt.text(ref - constant/10, 0.5, keylwst, rotation=90, ha='center', va='center', fontsize=8)
+    #plt.text(ref + constant/10, 0.5, keybgst, rotation=-90, ha='center', va='center', fontsize=8)
 
     # Constant value
     custom_value = max(x_min, min(patient, x_max))

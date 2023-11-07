@@ -4,6 +4,7 @@ from save_plot import insert_plot as IP
 from one_limit import o_chart as OL
 from two_limits import t_chart as TL
 from mult_limits import m_chart as ML
+from worder import WordPreparation
 
 
 def Sorter(group_name, test_name, patient_val):
@@ -31,19 +32,20 @@ def Sorter(group_name, test_name, patient_val):
             else:
                 keylwst = key
         fig = OL(patient_val, ref, keylwst, keybgst, constant)
-        plot_file = f'{test_name.lower().replace(" ","_").replace("/","to")}.png'
+        plot_file = f'{test_name.lower().replace(" ","_").replace("/","%")}.png'
         IP(group_name, plot_file, fig)
+
     elif l_remaining_limits > 0:
         constant = 2 * (abs(lwst - bgst)) / 3
         fig = ML(patient_val, lwst, bgst, keylwst, keybgst, constant, remaining_limits)
-        plot_file = f'{test_name.lower().replace(" ","_").replace("/","to")}.png'
+        plot_file = f'{test_name.lower().replace(" ","_").replace("/","%")}.png'
         IP(group_name, plot_file, fig)
         # send to >2 limit, needs *extra_limits
     else:
         # send to two limits, has a constant
         constant = 2 * (abs(lwst - bgst)) / 3
         fig = TL(patient_val, lwst, bgst, keylwst, keybgst, constant)
-        plot_file = f'{test_name.lower().replace(" ","_").replace("/","to")}.png'
+        plot_file = f'{test_name.lower().replace(" ","_").replace("/","%")}.png'
         IP(group_name, plot_file, fig)
     
 

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import numpy as np
-
+# conditional
 # Set the custom colormap
 cmap_colors = [(0.0000001, 0.3, 0), (0.95, 0.95, 0), (5, 0, 0)]
 cmap = mcolors.LinearSegmentedColormap.from_list("custom_color_map", cmap_colors, N=1000000)
@@ -29,7 +29,7 @@ def m_chart(patient, lwst, bgst, keylwst, keybgst, constant, extra_limits):
     plt.gca().get_yaxis().set_visible(False)
 
     for limit, label in zip(limits, labels):
-        plt.axvline(x=limit, color='black', linestyle='--', linewidth=1)
+        plt.axvline(x=limit, color='black', linestyle='-', linewidth=2)
         plt.text(limit - constant/10, 0.5, label, rotation=90, ha='center', va='center', fontsize=8)
 
     # Constant value

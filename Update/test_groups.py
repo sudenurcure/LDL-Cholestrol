@@ -1,74 +1,74 @@
 
 LMF = {
-    "TPTG": {"Optimal <":150, "High Risk >":150},
-    "TPCH": {"Optimal <":200, "High Risk >":200},
+    "TPTG": {150 : "Optimal <", 150 :"High Risk >"},
+    "TPCH": {200 : "Optimal <", 200 :"High Risk >"},
     "TPA1": None,
     "TPA2": None,
     "TPAB": None,
-    "ABA1": {"Optimal <":0.6, "High Risk >":0.8},
-    "TBPN": {"Optimal <":1400, "High Risk >":2000},
+    "ABA1": {0.6 : "Optimal <", 0.8 :"High Risk >"},
+    "TBPN": {1400 : "Optimal <", 2000 :"High Risk >"},
 }
 
 HDL = {
-    "HDCH": {"Optimal <":50, "High Risk >":50 },
+    "HDCH": {50 : "Optimal <", 50 :"High Risk >"},
     "HDFC": None,
 }
 
 IDL = {
-    "IDAB": {"Optimal <":4, "High Risk >":6},
-    "IDCH": {"Optimal <":70, "High Risk >":100},
-    "IDTG": {"Optimal <":6, "High Risk >":10},
+    "IDAB": {4 : "Optimal <", 6 :"High Risk >"},
+    "IDCH": {70 : "Optimal <", 100 :"High Risk >"},
+    "IDTG": {6 : "Optimal <", 10 :"High Risk >"},
 }
 
 LDL = {
-    "LDAB": {"Optimal <":70, "High Risk >":100},
+    "LDAB": {70 : "Optimal <", 100 :"High Risk >"},
     "LDCH": {"kardiyovasküler hastalığı olanlarda Optimal <":70,
                         "kardiyovasküler hastalığı olmayanlarda Optimal <":100,
-                        "High Risk >":130},
+                        130 :"High Risk >"},
     "LDFC": None,
-    "LDPN": {"Optimal <":1000, "High Risk >":1300},
-    "LDTG": {"Optimal <":24, "High Risk >":28},
-    "LDHD": {"Optimal <":2, "High Risk >":5},                                    
+    "LDPN": {1000 : "Optimal <", 1300 :"High Risk >"},
+    "LDTG": {24 : "Optimal <", 28 :"High Risk >"},
+    "LDHD": {2 : "Optimal <", 5 :"High Risk >"},                                    
 }
 
 VLDL = {
-    "VLAB": {"Optimal <":6, "High Risk >":10},
-    "VLPN": {"Optimal <":120, "High Risk >":180},
-    "VLTG": {"Optimal <":60, "High Risk >":90}
+    "VLAB": {6 : "Optimal <", 10 :"High Risk >"},
+    "VLPN": {120 : "Optimal <", 180 :"High Risk >"},
+    "VLTG": {60 : "Optimal <", 90 :"High Risk >"}
 }
 
 RATIO = {
-    "ldl-serbest kolestrol / ldl-kolestrol": {"Optimal <":0.5,
+    "ldl-serbest kolestrol / ldl-kolestrol": {0.5 : "Optimal <",
                                             "High Risk >=": 0.5},
-    "hdl-serbest kolestrol / hdl-kolestrol": {"Optimal <":0.5,
+    "hdl-serbest kolestrol / hdl-kolestrol": {0.5 : "Optimal <",
                                             "High Risk >=": 0.5}
 }
 
 def MONO():
-    dct = {"TPTG": {"Optimal <":150, "High Risk >":150},
-           "TPCH": {"Optimal <":200, "High Risk >":200},
-           "HDCH": {"Optimal <":50, "High Risk >":50 }}
+    dct = {"TPTG": {150 : "Optimal <", 150 :"High Risk >"},
+           "TPCH": {200 : "Optimal <", 200 :"High Risk >"},
+           "HDCH": {50 : "Optimal <", 50 :"High Risk >"}}
     return dct
 
 def DI():
-    dct = {"ABA1": {"Optimal <":0.6, "High Risk >":0.8},
-           "TBPN": {"Optimal <":1400, "High Risk >":2000},
-           "IDAB": {"Optimal <":4, "High Risk >":6},
-           "IDCH": {"Optimal <":70, "High Risk >":100},
-           "IDTG": {"Optimal <":6, "High Risk >":10},
-           "LDAB": {"Optimal <":70, "High Risk >":100},
-           "LDPN": {"Optimal <":1000, "High Risk >":1300},
-           "LDTG": {"Optimal <":24, "High Risk >":28},
-           "LDHD": {"Optimal <":2, "High Risk >":5},
-           "VLAB": {"Optimal <":6, "High Risk >":10},
-           "VLPN": {"Optimal <":120, "High Risk >":180},
-           "VLTG": {"Optimal <":60, "High Risk >":90}}
+    dct = {"ABA1": {0.6: "Optimal <", 0.8:"High Risk >"},
+           "TBPN": {1400: "Optimal <", 2000 : "High Risk >"},
+           "IDAB": {4 : "Optimal <", 6 :"High Risk >"},
+           "IDCH": {70: "Optimal <", 100 :"High Risk >"},
+           "IDTG": {6 : "Optimal <", 10 :"High Risk >"},
+           "LDAB": {70 : "Optimal <", 100 :"High Risk >"},
+           "LDPN": {1000 : "Optimal <", 1300 :"High Risk >"},
+           "LDTG": {24 : "Optimal <", 28 :"High Risk >"},
+           "LDHD": {2 : "Optimal <", 5 :"High Risk >"},
+           "VLAB": {6 : "Optimal <", 10 :"High Risk >"},
+           "VLPN": {120 : "Optimal <", 180 :"High Risk >"},
+           "VLTG": {60 : "Optimal <", 90 :"High Risk >"}}
     return dct
 
 def MULT():
     dct = {"LDCH": {"kardiyovasküler hastalığı olanlarda Optimal <":70,
                     "kardiyovasküler hastalığı olmayanlarda Optimal <":100,
-                    "High Risk >":130}}
+                    130 :"High Risk >"}}
     return dct
 
 def NO():

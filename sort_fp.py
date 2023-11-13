@@ -2,7 +2,7 @@ import pandas as pd
 import test_groups as TG
 from save_plot import insert_plot as IP
 from one_limit import o_chart as OL
-from two_limits import t_chart as TL
+from two_limits_old import t_chart as TL
 from mult_limits import m_chart as ML
 from worder import WordPreparation
 

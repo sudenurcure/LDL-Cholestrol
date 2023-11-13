@@ -8,8 +8,6 @@ WORD_FORMAT = "Word (.docx)"
 class WordPreparation:
     @staticmethod
     def generate_word(groupname):
-        groupname = groupname.split(".")[0]
-
         directory = f"all_files/{groupname}"
         all_pngs = os.listdir(directory)
         doc_name = f"{groupname}.docx"
@@ -24,6 +22,7 @@ class WordPreparation:
             png = directory+ "/" + png
             paragraph = doc.add_paragraph(testname+"\n")
             run = paragraph.runs[0]
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
             run.font.size = Pt(11)
             run.font.name = "Times New Roman"
             run.add_picture(png, width = Inches(3.92), height = Inches(0.91))

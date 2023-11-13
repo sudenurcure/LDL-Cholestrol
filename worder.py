@@ -2,7 +2,6 @@ import os
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from save_plot import insert_plot as IP
 
 WORD_FORMAT = "Word (.docx)"
 
@@ -20,15 +19,8 @@ class WordPreparation:
         # Create a Word document
         doc = Document()
 
-        """sections = doc.sections
-        for section in sections:
-            section.top_margin = Inches(1.4)
-            section.bottom_margin = Inches(0)
-            section.left_margin = Inches(0.86)
-            section.right_margin = Inches(0.86)
-"""
         for png in all_pngs:
-            testname = png.split(".")[0].replace("_"," ").replace("%", "/")
+            testname = png.split(".")[0]
             png = directory+ "/" + png
             paragraph = doc.add_paragraph(testname+"\n")
             run = paragraph.runs[0]
@@ -37,7 +29,6 @@ class WordPreparation:
             run.add_picture(png, width = Inches(3.92), height = Inches(0.91))
             os.remove(png)
 
-        
         # Save the Word document
         doc.save(doc_path)
 

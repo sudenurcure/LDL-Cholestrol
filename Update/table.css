@@ -1,0 +1,78 @@
+#lipoproteins .row .box .arrowIcon {
+    align-self: end;
+    justify-self: end;
+}
+
+#myFilters {
+    top: 64px;
+    width: 284px;
+    position: fixed;
+}
+
+/*lipoproteins*/
+#lipoproteins .boxlist .row {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+}
+
+#lipoproteins .boxlist .value-box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.row_inside {
+    height: 325px;
+    display: grid;
+    grid-template-rows: 50% 48%;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    word-break: break-word;
+}
+
+#lipoproteins .box h2 {
+    font-size: 23px;
+    color: #070a0e;
+    line-height: 1.3em;
+    text-align: left;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+}
+
+#lipoproteins .box T1 {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #ffffff;
+    text-align: left;
+}
+
+#lipoproteins .box T2 {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #ffffff;
+    text-align: left;
+}
+
+#lipoproteins .box T3 {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #ffffff;
+    text-align: left;
+}
+
+#lipoproteins .box T4 {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #ffffff;
+    text-align: left;
+}

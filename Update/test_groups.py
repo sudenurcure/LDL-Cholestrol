@@ -45,9 +45,9 @@ RATIO = {
 }
 
 def MONO():
-    dct = {"TPTG": {150 : "Optimal <", 150 :"High Risk >"},
-           "TPCH": {200 : "Optimal <", 200 :"High Risk >"},
-           "HDCH": {50 : "Optimal <", 50 :"High Risk >"}}
+    dct = {"TPTG": {"High Risk":150, "when" : ">"},
+           "TPCH": {"High Risk":200,"when" : ">"},
+           "HDCH": {"High Risk":50,"when" : ">"}}
     return dct
 
 def DI():

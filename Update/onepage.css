@@ -1,0 +1,245 @@
+#total_lipoproteins .total_lip_boxlist .row {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 286px 286px 286px;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    text-align: center;
+}
+
+#total_lipoproteins .total_lip_boxlist .headers {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 899px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#middle_range .middle_boxlist .row {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 286px 286px 286px;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#middle_range .box h2 {
+    font-size: 20px;
+    color: #070a0e;
+    background: rgba(235, 234, 234, 0.95);
+    text-align: center;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-left: 2px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+#lipid_distribution .container {
+    display: grid;
+    grid-template-columns: 50px 169px 169px 169px 169px;
+    grid-template-rows: 50px 169px 169px 169px 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". HDL LDL VLDL Total"
+        "TG x f i ü"
+        "Chol y g j p"
+        "Free-Chol z h k r"
+        "Phospolipid a ı l s";
+    text-align: center;
+}
+
+#lipid_distribution .container .Free {
+    grid-area: Free;
+}
+
+#lipid_distribution .container .HDL {
+    grid-area: HDL;
+}
+
+#lipid_distribution .container .LDL {
+    grid-area: LDL;
+}
+
+#lipid_distribution .container .VLDL {
+    grid-area: VLDL;
+}
+
+#lipid_distribution .container .Total {
+    display: grid;
+    grid-template-columns: 338px;
+    grid-template-rows: 169px 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "."
+        "Table";
+    grid-area: Total;
+    text-align: center;
+}
+
+#lipid_distribution .container .Table {
+    display: grid;
+    grid-template-columns: 169px 169px;
+    grid-template-rows: 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". Range";
+    grid-area: Table;
+}
+
+#lipid_distribution .container .Range {
+    grid-area: Range;
+}
+
+#lipid_distribution .container .TG {
+    grid-area: TG;
+}
+
+#lipid_distribution .container .Chol {
+    grid-area: Chol;
+}
+
+#lipid_distribution .container .Free-Chol {
+    grid-area: Free-Chol;
+}
+
+#lipid_distribution .container .Phospolipid {
+    grid-area: Phospolipid;
+}
+
+#lipid_distribution .container .x {
+    grid-area: x;
+}
+
+#lipid_distribution .container .y {
+    grid-area: y;
+}
+
+#lipid_distribution .container .z {
+    grid-area: z;
+}
+
+#lipid_distribution .container .a {
+    grid-area: a;
+}
+
+#lipid_distribution .container .f {
+    grid-area: f;
+}
+
+#lipid_distribution .container .g {
+    grid-area: g;
+}
+
+#lipid_distribution .container .h {
+    grid-area: h;
+}
+
+#lipid_distribution .container .ı {
+    grid-area: ı;
+}
+
+#lipid_distribution .container .i {
+    grid-area: i;
+}
+
+#lipid_distribution .container .j {
+    grid-area: j;
+}
+
+#lipid_distribution .container .k {
+    grid-area: k;
+}
+
+#lipid_distribution .container .l {
+    grid-area: l;
+}
+
+#lipid_distribution .container .ü {
+    display: grid;
+    grid-template-columns: 169px 169px;
+    grid-template-rows: 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "m n";
+    grid-area: ü;
+}
+
+#lipid_distribution .container .m {
+    grid-area: m;
+}
+
+#lipid_distribution .container .n {
+    grid-area: n;
+}
+
+#lipid_distribution .container .p {
+    display: grid;
+    grid-template-columns: 169px 169px;
+    grid-template-rows: 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "ş t";
+    grid-area: p;
+}
+
+#lipid_distribution .container .ş {
+    grid-area: ş;
+}
+
+#lipid_distribution .container .t {
+    grid-area: t;
+}
+
+#lipid_distribution .container .r {
+    display: grid;
+    grid-template-columns: 169px 169px;
+    grid-template-rows: 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "u v";
+    grid-area: r;
+}
+
+#lipid_distribution .container .u {
+    grid-area: u;
+}
+
+#lipid_distribution .container .v {
+    grid-area: v;
+}
+
+#lipid_distribution .container .s {
+    display: grid;
+    grid-template-columns: 169px 169px;
+    grid-template-rows: 169px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "hello ıly";
+    grid-area: s;
+}
+
+#lipid_distribution .container .hello {
+    grid-area: hello;
+}
+
+#lipid_distribution .container .ıly {
+    grid-area: ıly;
+}

@@ -16,7 +16,7 @@ HDL = {
 
 IDL = {
     "IDAB": {4 : "Optimal <", 6 :"High Risk >"},
-    "IDCH": {70 : "Optimal <", 100 :"High Risk >"},
+    "IDCH": None,
     "IDTG": {6 : "Optimal <", 10 :"High Risk >"},
 }
 

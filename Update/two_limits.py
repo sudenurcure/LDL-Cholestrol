@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
-    x_min = min(lwst, bgst) - constant
-    x_max = max(lwst, bgst) + constant
+    x_min = lwst - constant
+    x_max = bgst + constant
 
     x = np.linspace(x_min, x_max, 1000)
     y = np.ones(1000)

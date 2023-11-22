@@ -5,14 +5,6 @@ L3PN [nmol/L] is not in tests dictionary.
 L4PN [nmol/L] is not in tests dictionary.
 L5PN [nmol/L] is not in tests dictionary.
 L6PN [nmol/L] is not in tests dictionary.
-HDTG [mg/dL] is not in tests dictionary.
-VLCH [mg/dL] is not in tests dictionary.
-VLFC [mg/dL] is not in tests dictionary.
-IDFC [mg/dL] is not in tests dictionary.
-VLPL [mg/dL] is not in tests dictionary.
-IDPL [mg/dL] is not in tests dictionary.
-LDPL [mg/dL] is not in tests dictionary.
-HDPL [mg/dL] is not in tests dictionary.
 HDA1 [mg/dL] is not in tests dictionary.
 HDA2 [mg/dL] is not in tests dictionary.
 V1TG [mg/dL] is not in tests dictionary.

@@ -1,10 +1,10 @@
-HDTG [mg/dL] is not in tests dictionary.
-HDPL [mg/dL] is not in tests dictionary.
+HDTG [mg/dL] is not in tests dictionary. DONE
+HDPL [mg/dL] is not in tests dictionary. DONE
 HDA1 [mg/dL] is not in tests dictionary.
 HDA2 [mg/dL] is not in tests dictionary.
-IDFC [mg/dL] is not in tests dictionary.
-IDPL [mg/dL] is not in tests dictionary.
-LDPL [mg/dL] is not in tests dictionary.
-VLCH [mg/dL] is not in tests dictionary.
-VLFC [mg/dL] is not in tests dictionary.
-VLPL [mg/dL] is not in tests dictionary.
+IDFC [mg/dL] is not in tests dictionary. DONE
+IDPL [mg/dL] is not in tests dictionary. DONE
+LDPL [mg/dL] is not in tests dictionary. DONE
+VLCH [mg/dL] is not in tests dictionary. DONE
+VLFC [mg/dL] is not in tests dictionary. DONE
+VLPL [mg/dL] is not in tests dictionary. DONE

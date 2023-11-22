@@ -28,6 +28,62 @@ class TESTS:
         "Risk": None
     }
 
+    HDTG = {
+        "Unit": "mg/dL",
+        "RoM": list(range(7, 30)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    HDPL = {
+        "Unit": "mg/dL",
+        "RoM": list(range(57, 137)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    IDFC = {
+        "Unit": "mg/dL",
+        "RoM": list(range(1, 15)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    IDPL = {
+        "Unit": "mg/dL",
+        "RoM": list(range(3, 34)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    LDPL = {
+        "Unit": "mg/dL",
+        "RoM": list(range(37, 122)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    VLCH = {
+        "Unit": "mg/dL",
+        "RoM": list(range(5, 58)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    VLFC = {
+        "Unit": "mg/dL",
+        "RoM": list(range(3, 34)),
+        "Optimal": None,
+        "Risk": None
+    }
+
+    VLPL = {
+        "Unit": "mg/dL",
+        "RoM": list(range(6, 68)),
+        "Optimal": None,
+        "Risk": None
+    }
+
     IDAB = {
         "Unit": "mg/dL",
         "RoM": list(range(2, 18)),

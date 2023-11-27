@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMR Lipoprotein</title>
+    <link rel="stylesheet" type="text/css" href="v3_css.css" />
+</head>
+
+<body>
+    <section id="profile_page">
+        <!--Has TPTG, TPCH, LDCH, HDCH, TPA1, TPA2, TPAB, TBPN;
+        TBPN, LDCH range
+        TPA1/A2/AB has no reference-->
+        <div class="container">
+            <div class="firstpage">
+                <h2 class="mainheader">NMR Lipoprotein Profile</h2>
+                <div class="row table" , id="important_list">
+                    <div>
+                        <div class="box_container"><label for="total_trig">Total Triglycerides </label>
+                            <img src="all_files/TPTG.png" style="width:60px;height:40px" , id="total_trig">
+                        </div>
+
+                    </div>
+                    <div class="range_container">
+                        <label for="total_ab">Total ApoB 100 </label>
+                        <img src="all_files/TPAB.png" style="width:60px;height:40px" , id="total_ab">
+                    </div>
+                    <div class="range_container">
+                        <label for="total_chol">Total Cholestrol </label>
+                        <img src="all_files/TPCH.png" style="width:60px;height:40px" , id="total_chol">
+                    </div>
+                    <div class="range_container">
+                        <label for="total_a1">Total A1 </label>
+                        <img src="all_files/TPA1.png" style="width:60px;height:40px" , id="total_a1">
+                    </div>
+                    <div class="range_container">
+                        <label for="hdlch">HDL Cholestrol </label>
+                        <img src="all_files/HDCH.png" style="width:60px;height:40px" , id="hdlch">
+                    </div>
+                    <div class="range_container">
+                        <label for="total_a2">Total A2 </label>
+                        <img src="all_files/TPA2.png" style="width:60px;height:40px" , id="total_a2">
+                    </div>
+                    <div class="range_container">
+                        <label for="ldlch">LDL Cholestrol </label><br>
+                        <img src="all_files/LDCH.png" style="width:240px;height:30px" , id="ldlch">
+                    </div>
+                    <div class="range_container">
+                        <label for="totalApoB">Total ApoB Carrying Particle </label>
+                        <img src="all_files/TBPN.png" style="width:260px;height:30px" , id="totalApoB"><br>
+                    </div>
+                </div>
+
+                <h3 class="headers">Calculated Fields</h3>
+                <div class="secrow table" , id="calculated">
+                    <div class="range_container">
+                        <label for="cABA1">Apo B100 / Apo A1 </label>
+                        <img src="all_files/ABA1.png" style="width:240px;height:30px" , id="cABA1">
+                    </div>
+                    <div class="range_container">
+                        <label for="cLDHD">LDL Cholestrol / HDL Cholestrol </label>
+                        <img src="all_files/LDHD.png" style="width:240px;height:30px" , id="cLDHD">
+                    </div>
+                    <div class="range_container">
+                        <label for="cLFLC">LDL Free Cholestrol / LDL Cholestrol </label>
+                        <img src="all_files/LFLC.png" style="width:240px;height:30px" , id="cLFLC">
+                    </div>
+                    <div class="range_container">
+                        <label for="cHFHC">HDL Free Cholestrol / HDL Cholestrol </label>
+                        <img src="all_files/HFHC.png" style="width:60px;height:40px" , id="cHFHC">
+                    </div>
+                </div>
+
+                <h3 class="headers">Lipoprotein Main Fractions</h3>
+                <div class="secrow table" , id="particlenum">
+                    <div class="range_container">
+                        <label for="total_vlpn">VLDL Particle Number </label>
+                        <img src="all_files/VLPN.png" style="width:260px;height:30px" , id="total_vlpn">
+                    </div>
+                    <div class="range_container">
+                        <label for="total_ldpn">LDL Particle Number </label>
+                        <img src="all_files/LDPN.png" style="width:260px;height:30px" , id="total_ldpn">
+                    </div>
+                    <div class="range_container">
+                        <label for="total_ıdpn">IDL Particle Number </label>
+                        <img src="all_files/IDPN.png" style="width:260px;height:30px" , id="total_ıdpn">
+                    </div>
+                </div>
+
+                <h3 class="headers">Apolipoproteins</h3>
+                <div class="secrow table" , id="apo">
+                    <div class="range_container">
+                        <label for="VLDapoB">VLDL Apo B100 </label>
+                        <img src="all_files/VLAB.png" style="width:240px;height:30px" , id="VLDapoB">
+                    </div>
+                    <div class="range_container">
+                        <label for="LDapoB">LDL Apo B100 </label>
+                        <img src="all_files/LDAB.png" style="width:240px;height:30px" , id="LDapoB">
+                    </div>
+                    <div class="range_container">
+                        <label for="IDapoB">IDL Apo B100 </label>
+                        <img src="all_files/IDAB.png" style="width:240px;height:30px" , id="IDapoB">
+                    </div>
+                </div>
+
+                <div class="thirdrow table" , id="subfraction">
+                    <div>
+                        <h3 class="subheader">Cholestrol</h3>
+                        <div class="box_container">
+                            <label for="hdlch">HDL </label>
+                            <img src="all_files/HDCH.png" style="width:60px;height:40px" , id="hdlch">
+                        </div>
+                        <div class="box_container">
+                            <label for="ıdlch">IDL </label>
+                            <img src="all_files/IDCH.png" style="width:60px;height:40px" , id="ıdlch">
+                        </div>
+                        <div class="range_container">
+                            <label for="ldlch">LDL </label>
+                            <img src="all_files/LDCH.png" style="width:169px;height:20px" , id="ldlch">
+                        </div>
+                        <div class="box_container">
+                            <label for="vdlch">VLDL </label>
+                            <img src="all_files/VLCH.png" style="width:60px;height:40px" , id="vdlch">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="subheader">Free Cholestrol</h3>
+                        <div class="box_container">
+                            <label for="hdlfc">HDL </label>
+                            <img src="all_files/HDFC.png" style="width:60px;height:40px" , id="hdlfc">
+                        </div>
+                        <div class="box_container">
+                            <label for="ıdLfc">IDL </label>
+                            <img src="all_files/IDFC.png" style="width:60px;height:40px" , id="ıdlfc">
+                        </div>
+                        <div class="box_container">
+                            <label for="ldlfc">LDL </label>
+                            <img src="all_files/LDFC.png" style="width:60px;height:40px" , id="ldlfc">
+                        </div>
+                        <div class="box_container">
+                            <label for="vdlfc">VLDL </label>
+                            <img src="all_files/VLFC.png" style="width:60px;height:40px" , id="vdlfc">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="subheader">Triglyceride</h3>
+                        <div class="box_container">
+                            <label for="hdltg">HDL </label>
+                            <img src="all_files/HDTG.png" style="width:60px;height:40px" , id="hdltg">
+                        </div>
+                        <div class="range_container">
+                            <label for="ıdltg">IDL </label>
+                            <img src="all_files/IDTG.png" style="width:169px;height:20px" , id="ıdltg">
+                        </div>
+                        <div class="range_container">
+                            <label for="ldltg">LDL </label>
+                            <img src="all_files/LDTG.png" style="width:169px;height:20px" , id="ldltg">
+                        </div>
+                        <div class="range_container">
+                            <label for="vldltg">VLDL </label>
+                            <img src="all_files/VLTG.png" style="width:169px;height:20px" , id="vldltg">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="subheader">Phospholipid</h3>
+                        <div class="box_container">
+                            <label for="hdlpl">HDL </label>
+                            <img src="all_files/HDPL.png" style="width:60px;height:40px" , id="hdlpl">
+                        </div>
+                        <div class="box_container">
+                            <label for="ıdLpl">IDL </label>
+                            <img src="all_files/IDPL.png" style="width:60px;height:40px" , id="ıdlpl">
+                        </div>
+                        <div class="box_container">
+                            <label for="ldlpl">LDL </label>
+                            <img src="all_files/LDPL.png" style="width:60px;height:40px" , id="ldlpl">
+                        </div>
+                        <div class="box_container">
+                            <label for="vdlpl">VLDL </label>
+                            <img src="all_files/VLPL.png" style="width:60px;height:40px" , id="vdlpl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="lipid_distribution">
+        <div class="container">
+            <div class="Free"></div>
+            <div class="HDL">HDL</div>
+            <div class="LDL">LDL</div>
+            <div class="VLDL">VLDL</div>
+
+            <div class="TG" style="writing-mode: vertical-lr;transform: rotate(180deg); font-family: 'Times New Roman'">
+                Triglycerides</div>
+            <div class="Chol" style=" writing-mode: vertical-lr;transform: rotate(180deg)">Cholestrol</div>
+            <div class="Free-Chol" style="writing-mode: vertical-lr;transform: rotate(180deg)">Free Cholestrol</div>
+            <div class="Phospholipid" style="writing-mode: vertical-lr;transform: rotate(180deg)">Phospholipid</div>
+            <div class="x"><img src="all_files/HDL_SUBF/triglycerides.png" alt="HDL triglycerides" width=269px
+                    height=269px></div>
+            <div class="y"><img src="all_files/HDL_SUBF/chol.png" alt="HDL cholestrol" width=269px height=269px></div>
+            <div class="z"><img src="all_files/HDL_SUBF/freechol.png" alt="HDL free cholestrol" width=269px
+                    height=269px></div>
+            <div class="a"><img src="all_files/HDL_SUBF/phospholipid.png" alt="HDL phospholipid" width=269px
+                    height=269px>
+            </div>
+            <div class="f"><img src="all_files/LDL_SUBF/triglycerides.png" alt="LDL triglycerides" width=269px
+                    height=269px></div>
+            <div class="g"><img src="all_files/LDL_SUBF/chol.png" alt="LDL cholestrol" width=269px height=269px></div>
+            <div class="h"><img src="all_files/LDL_SUBF/freechol.png" alt="LDL free cholestrol" width=269px
+                    height=269px></div>
+            <div class="ı"><img src="all_files/LDL_SUBF/phospholipid.png" alt="LDL phospholipid" width=269px
+                    height=269px>
+            </div>
+            <div class="i"><img src="all_files/VLDL_SUBF/triglycerides.png" alt="VLDL triglycerides" width=269px
+                    height=269px></div>
+            <div class="j"><img src="all_files/VLDL_SUBF/chol.png" alt="VLDL cholestrol" width=269px height=269px></div>
+            <div class="k"><img src="all_files/VLDL_SUBF/freechol.png" alt="VLDL free cholestrol" width=269px
+                    height=269px></div>
+            <div class="l"><img src="all_files/VLDL_SUBF/phospholipid.png" alt="VLDL phospholipid" width=269px
+                    height=269px></div>
+
+        </div>
+    </section>
+</body>
+
+</html>

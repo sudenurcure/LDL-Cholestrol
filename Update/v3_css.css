@@ -1,0 +1,211 @@
+#profile_page .firstpage .row {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 429px 429px;
+    grid-column-gap: 15px;
+    text-align: center;
+}
+
+#profile_page .firstpage .secrow {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 899px;
+    grid-column-gap: 15px;
+    text-align: left;
+}
+
+#profile_page .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5em;
+}
+
+#profile_page .box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile_page .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile_page .secrow .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#profile_page .firstpage .thirdrow {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 214.5px 214.5px 214.5px 214.5px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    text-align: center;
+}
+
+#profile_page .firstpage .mainheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 899px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#profile_page .firstpage .headers {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#profile_page .firstpage .subheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 204px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#lipid_distribution .container {
+    display: grid;
+    grid-template-columns: 50px 269px 269px 269px;
+    grid-template-rows: 40px 269x 269px 269px 269px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". HDL LDL VLDL"
+        "TG x f i"
+        "Chol y g j"
+        "Free-Chol z h k"
+        "Phospholipid a ı l";
+    text-align: center;
+}
+
+#lipid_distribution .container .Free {
+    grid-area: Free;
+}
+
+#lipid_distribution .container .HDL {
+    grid-area: HDL;
+}
+
+#lipid_distribution .container .LDL {
+    grid-area: LDL;
+}
+
+#lipid_distribution .container .VLDL {
+    grid-area: VLDL;
+}
+
+#lipid_distribution .container .Table {
+    display: grid;
+    grid-template-columns: 269px 269px;
+    grid-template-rows: 269px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". Range";
+    grid-area: Table;
+}
+
+#lipid_distribution .container .HDL,
+.LDL,
+.VLDL {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: auto;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 15px;
+    padding-bottom: 0.5em;
+}
+
+#lipid_distribution .container .Range {
+    grid-area: Range;
+}
+
+#lipid_distribution .container .TG {
+    grid-area: TG;
+}
+
+#lipid_distribution .container .Chol {
+    grid-area: Chol;
+}
+
+#lipid_distribution .container .Free-Chol {
+    grid-area: Free-Chol;
+}
+
+#lipid_distribution .container .Phospholipid {
+    grid-area: Phospholipid;
+}
+
+#lipid_distribution .container .x {
+    grid-area: x;
+}
+
+#lipid_distribution .container .y {
+    grid-area: y;
+}
+
+#lipid_distribution .container .z {
+    grid-area: z;
+}
+
+#lipid_distribution .container .a {
+    grid-area: a;
+}
+
+#lipid_distribution .container .f {
+    grid-area: f;
+}
+
+#lipid_distribution .container .g {
+    grid-area: g;
+}
+
+#lipid_distribution .container .h {
+    grid-area: h;
+}
+
+#lipid_distribution .container .ı {
+    grid-area: ı;
+}
+
+#lipid_distribution .container .i {
+    grid-area: i;
+}
+
+#lipid_distribution .container .j {
+    grid-area: j;
+}
+
+#lipid_distribution .container .k {
+    grid-area: k;
+}
+
+#lipid_distribution .container .l {
+    grid-area: l;
+}

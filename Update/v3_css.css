@@ -90,7 +90,7 @@
 #lipid_distribution .container {
     display: grid;
     grid-template-columns: 50px 269px 269px 269px;
-    grid-template-rows: 40px 269x 269px 269px 269px;
+    grid-template-rows: 40px 269px 269px 269px 269px;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -100,6 +100,18 @@
         "Free-Chol z h k"
         "Phospholipid a ı l";
     text-align: center;
+}
+
+#lipid_distribution .main_header {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
 }
 
 #lipid_distribution .container .Free {
@@ -133,13 +145,31 @@
 .LDL,
 .VLDL {
     background: rgba(235, 234, 234, 0.95);
-    size: 20px;
+    size: 5px;
     width: auto;
     font-weight: bold;
     margin: 0em 2px 0.5em -2px;
     padding-top: 0.5em;
     padding-left: 15px;
     padding-bottom: 0.5em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#lipid_distribution .container .TG,
+.Chol,
+.Free-Chol,
+.Phospholipid {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: auto;
+    font-weight: bold;
+    margin: -2.5em 2px -2em 0px;
+    padding-top: 0.5em;
+    padding-left: 15px;
+    padding-bottom: 0.5em;
+    font-family: "Times New Roman", Times, serif;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
 }
 
 #lipid_distribution .container .Range {

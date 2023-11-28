@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 429px 429px;
     grid-column-gap: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 #profile_page .firstpage .secrow {
@@ -19,14 +19,14 @@
 #profile_page .range_container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 0.5em;
 }
 
-#profile_page .box_container {
+#profile_page .firstpage .box_container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #profile_page .name {
@@ -36,6 +36,12 @@
 }
 
 #profile_page .secrow .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#profile_page .secrow .box_container {
     display: flex;
     align-items: center;
     justify-content: left;

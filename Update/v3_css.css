@@ -2,7 +2,7 @@
     width: 30%;
     padding-left: 5px;
     display: grid;
-    grid-template-columns: 429px 429px;
+    grid-template-columns: 437px 437px;
     grid-column-gap: 15px;
     text-align: left;
 }
@@ -36,20 +36,22 @@
 }
 
 #profile_page .secrow .range_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 357px 264px 266px;
     align-items: center;
     justify-content: left;
 }
 
 #profile_page .secrow .box_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 357px 264px 266px;
     align-items: center;
     justify-content: left;
 }
 
 #profile_page .firstpage .thirdrow {
     width: 30%;
-    padding-left: 5px;
+    padding-left: 0px;
     display: grid;
     grid-template-columns: 214.5px 214.5px 214.5px 214.5px;
     grid-column-gap: 15px;
@@ -84,7 +86,7 @@
 #profile_page .firstpage .subheader {
     background: rgba(235, 234, 234, 0.95);
     size: 20px;
-    width: 204px;
+    width: 213px;
     text-align: center;
     font-weight: bold;
     margin: 0.5em 2px 0.4em -2px;
@@ -106,6 +108,35 @@
         "Free-Chol z h k"
         "Phospholipid a ı l";
     text-align: center;
+}
+
+#ldl_subfractions .main_header {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#ldl_subfractions .row {
+    width: 30%;
+    padding-left: 5px;
+    padding-bottom: 3em;
+    display: grid;
+    grid-template-columns: 437px 437px;
+    grid-column-gap: 15px;
+    text-align: left;
+}
+
+#ldl_subfractions .row .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
 }
 
 #lipid_distribution .main_header {

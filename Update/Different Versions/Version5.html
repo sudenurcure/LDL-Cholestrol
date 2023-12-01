@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMR Lipoprotein</title>
-    <link rel="stylesheet" type="text/css" href="v3_css.css" />
+    <link rel="stylesheet" type="text/css" href="v5_css.css" />
 </head>
 
 <body>
     <section id="profile_page">
-        <!--Has TPTG_box, TPCH_box, LDCH, HDCH_box, TPA1_box, TPA2_box, TPAB_box, TBPN;
-        TBPN, LDCH range
-        TPA1_box/A2/AB has no reference-->
         <div class="container">
             <div class="firstpage">
                 <h2 class="mainheader">NMR Lipoprotein Profile</h2>
@@ -81,7 +78,6 @@
                         </p>
                     </div>
                 </div>
-
                 <h3 class="headers">Lipoprotein Main Fractions</h3>
                 <div class="secrow table" , id="particlenum">
                     <div class="range_container">
@@ -119,95 +115,96 @@
                         <img src="all_files/IDAB.png" style="width:214px;height:46px" , id="IDapoB">
                     </div>
                 </div>
-
-                <div class="thirdrow table" , id="subfraction">
-                    <div>
-                        <h3 class="subheader">Cholesterol</h3>
-                        <!--
-                        <div class="box_container">
-                            <label for="hdlch">HDL </label>
-                            <img src="all_files/HDCH_box.png" style="width:80px;height:30px" , id="hdlch">
-                        </div>-->
-                        <div class="box_container">
-                            <label for="ıdlch">IDL </label>
-                            <img src="all_files/IDCH_box.png" style="width:80px;height:30px" , id="ıdlch">
-                        </div>
-                        <!--
-                        <div class="range_container">
-                            <label for="ldlch">LDL </label>
-                            <img src="all_files/LDCH_box.png" style="width:56px;height:20px">
-                            <img src="all_files/LDCH.png" style="width:169px;height:20px" , id="ldlch">
-                        </div> -->
-                        <div class="box_container">
-                            <label for="vdlch">VLDL </label>
-                            <img src="all_files/VLCH_box.png" style="width:80px;height:30px" , id="vdlch">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="subheader">Free Cholesterol</h3>
-                        <div class="box_container">
-                            <label for="hdlfc">HDL </label>
-                            <img src="all_files/HDFC_box.png" style="width:80px;height:30px" , id="hdlfc">
-                        </div>
-                        <div class="box_container">
-                            <label for="ıdLfc">IDL </label>
-                            <img src="all_files/IDFC_box.png" style="width:80px;height:30px" , id="ıdlfc">
-                        </div>
-                        <div class="box_container">
-                            <label for="ldlfc">LDL </label>
-                            <img src="all_files/LDFC_box.png" style="width:80px;height:30px" , id="ldlfc">
-                        </div>
-                        <div class="box_container">
-                            <label for="vdlfc">VLDL </label>
-                            <img src="all_files/VLFC_box.png" style="width:80px;height:30px" , id="vdlfc">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="subheader">Triglyceride</h3>
-                        <div class="box_container">
-                            <label for="hdltg">HDL </label>
-                            <img src="all_files/HDTG_box.png" style="width:80px;height:30px" , id="hdltg">
-                        </div>
-                        <div class="range_container">
-                            <label for="ıdltg">IDL </label>
-                            <img src="all_files/IDTG_box.png" style="width:56px;height:20px">
-                            <img src="all_files/IDTG.png" style="width:110px;height:30px" , id="ıdltg">
-                        </div>
-                        <div class="range_container">
-                            <label for="ldltg">LDL </label>
-                            <img src="all_files/LDTG_box.png" style="width:56px;height:20px">
-                            <img src="all_files/LDTG.png" style="width:110px;height:30px" , id="ldltg">
-                        </div>
-                        <div class="range_container">
-                            <label for="vldltg">VLDL </label>
-                            <img src="all_files/VLTG_box.png" style="width:56px;height:20px">
-                            <img src="all_files/VLTG.png" style="width:110px;height:30px" , id="vldltg">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="subheader">Phospholipid</h3>
-                        <div class="box_container">
-                            <label for="hdlpl">HDL </label>
-                            <img src="all_files/HDPL_box.png" style="width:80px;height:30px" , id="hdlpl">
-                        </div>
-                        <div class="box_container">
-                            <label for="ıdLpl">IDL </label>
-                            <img src="all_files/IDPL_box.png" style="width:80px;height:30px" , id="ıdlpl">
-                        </div>
-                        <div class="box_container">
-                            <label for="ldlpl">LDL </label>
-                            <img src="all_files/LDPL_box.png" style="width:80px;height:30px" , id="ldlpl">
-                        </div>
-                        <div class="box_container">
-                            <label for="vdlpl">VLDL </label>
-                            <img src="all_files/VLPL_box.png" style="width:80px;height:30px" , id="vdlpl">
-                        </div>
-                    </div>
-                </div>
             </div>
     </section>
 
     <div class="page-break"></div>
+    <section id="ıdk">
+        <div class="container">
+            <div class="thirdrow table" , id="subfraction">
+                <div>
+                    <h3 class="subheader">Cholesterol</h3>
+                    <!--
+                    <div class="box_container">
+                        <label for="hdlch">HDL </label>
+                        <img src="all_files/HDCH_box.png" style="width:80px;height:30px" , id="hdlch">
+                    </div>-->
+                    <div class="box_container">
+                        <label for="ıdlch">IDL </label>
+                        <img src="all_files/IDCH_box.png" style="width:80px;height:30px" , id="ıdlch">
+                    </div>
+                    <!--
+                    <div class="range_container">
+                        <label for="ldlch">LDL </label>
+                        <img src="all_files/LDCH_box.png" style="width:56px;height:20px">
+                        <img src="all_files/LDCH.png" style="width:169px;height:20px" , id="ldlch">
+                    </div> -->
+                    <div class="box_container">
+                        <label for="vdlch">VLDL </label>
+                        <img src="all_files/VLCH_box.png" style="width:80px;height:30px" , id="vdlch">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="subheader">Free Cholesterol</h3>
+                    <div class="box_container">
+                        <label for="hdlfc">HDL </label>
+                        <img src="all_files/HDFC_box.png" style="width:80px;height:30px" , id="hdlfc">
+                    </div>
+                    <div class="box_container">
+                        <label for="ıdLfc">IDL </label>
+                        <img src="all_files/IDFC_box.png" style="width:80px;height:30px" , id="ıdlfc">
+                    </div>
+                    <div class="box_container">
+                        <label for="ldlfc">LDL </label>
+                        <img src="all_files/LDFC_box.png" style="width:80px;height:30px" , id="ldlfc">
+                    </div>
+                    <div class="box_container">
+                        <label for="vdlfc">VLDL </label>
+                        <img src="all_files/VLFC_box.png" style="width:80px;height:30px" , id="vdlfc">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="subheader">Triglyceride</h3>
+                    <div class="box_container">
+                        <label for="hdltg">HDL </label>
+                        <img src="all_files/HDTG_box.png" style="width:80px;height:30px" , id="hdltg">
+                    </div>
+                    <div class="range_container">
+                        <label for="ıdltg">IDL </label>
+                        <img src="all_files/IDTG_box.png" style="width:80px;height:30px">
+                        <img src="all_files/IDTG.png" style="width:214px;height:46px" , id="ıdltg">
+                    </div>
+                    <div class="range_container">
+                        <label for="ldltg">LDL </label>
+                        <img src="all_files/LDTG_box.png" style="width:80px;height:30px">
+                        <img src="all_files/LDTG.png" style="width:214px;height:46px" , id="ldltg">
+                    </div>
+                    <div class="range_container">
+                        <label for="vldltg" , style="font-size: small;">VLDL </label>
+                        <img src="all_files/VLTG_box.png" style="width:80px;height:30px">
+                        <img src="all_files/VLTG.png" style="width:214px;height:46px" , id="vldltg">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="subheader">Phospholipid</h3>
+                    <div class="box_container">
+                        <label for="hdlpl">HDL </label>
+                        <img src="all_files/HDPL_box.png" style="width:80px;height:30px" , id="hdlpl">
+                    </div>
+                    <div class="box_container">
+                        <label for="ıdLpl">IDL </label>
+                        <img src="all_files/IDPL_box.png" style="width:80px;height:30px" , id="ıdlpl">
+                    </div>
+                    <div class="box_container">
+                        <label for="ldlpl">LDL </label>
+                        <img src="all_files/LDPL_box.png" style="width:80px;height:30px" , id="ldlpl">
+                    </div>
+                    <div class="box_container">
+                        <label for="vdlpl">VLDL </label>
+                        <img src="all_files/VLPL_box.png" style="width:80px;height:30px" , id="vdlpl">
+                    </div>
+                </div>
+    </section>
 
     <section id="ldl_subfractions">
         <div class="container">
@@ -215,57 +212,43 @@
             <div class="row table">
                 <div class="range_container">
                     <label for="ldl1">LDL1 Particle Number </label>
-                    <img src="all_files/L1PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L1PN.png" style="width:214px;height:46px" , id="ldl1">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl1">
                 </div>
                 <div class="range_container">
                     <label for="ldl2">LDL2 Particle Number </label>
-                    <img src="all_files/L2PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L2PN.png" style="width:214px;height:46px" , id="ldl2">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl2">
                 </div>
                 <div class="range_container">
                     <label for="ldl3">LDL3 Particle Number </label>
-                    <img src="all_files/L3PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L3PN.png" style="width:214px;height:46px" , id="ldl3">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl3">
                 </div>
                 <div class="range_container">
                     <label for="ldl4">LDL4 Particle Number </label>
-                    <img src="all_files/L4PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L4PN.png" style="width:214px;height:46px" , id="ldl4">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl4">
                 </div>
                 <div class="range_container">
                     <label for="ldl5">LDL5 Particle Number </label>
-                    <img src="all_files/L5PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L5PN.png" style="width:214px;height:46px" , id="ldl5">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl5">
                 </div>
                 <div class="range_container">
                     <label for="ldl6">LDL6 Particle Number </label>
-                    <img src="all_files/L6PN_box.png" style="width:80px;height:30px">
-                    <img src="all_files/L6PN.png" style="width:214px;height:46px" , id="ldl6">
+                    <img src="all_files/VLAB_box.png" style="width:80px;height:30px">
+                    <img src="all_files/VLAB.png" style="width:214px;height:46px" , id="ldl6">
                 </div>
             </div>
-            <hr>
-            <div class="total ldl">
-                <div class="range_container">
-                    <label for="ldlpn" , style="font-weight: bolder;font-size: large; padding-left: 10.5em;">LDL
-                        Particle Number
-                    </label>
-                    <img src="all_files/LDPL_box.png" style="width:80px;height:30px">
-                    <img src="all_files/LDPN.png" style="width:316px;height:70px" , id="ldlpn">
-                </div>
-            </div>
+        </div>
     </section>
 
     <section id="periodic_assessment">
         <div class="container">
             <h3 class="headers">Periodic Assessments</h3>
-            <div class="row period">
-                <label for="ldlpn_periodic" , style="font-weight: bolder;font-size:large; padding-left: 3.5em;">LDL
-                    Particle Number
-                </label>
-                <div class="periodic_assessment">
-                    <img src="all_files/timelyldlpn.png" style="width:671px;height:150px" , id="ldlpn_periodic">
-                </div>
+            <div class="periodic_assessment">
+                <img src="all_files/VLAB.png" style="width:250px;height:50px">
             </div>
         </div>
     </section>

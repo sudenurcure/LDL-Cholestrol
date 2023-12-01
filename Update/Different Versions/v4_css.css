@@ -11,10 +11,6 @@
     }
 }
 
-hr {
-    margin: 0rem 0.7rem 1rem -0.1rem;
-}
-
 .headers {
     background: rgba(235, 234, 234, 0.95);
     size: 20px;
@@ -80,7 +76,7 @@ hr {
     width: 30%;
     padding-left: 0px;
     display: grid;
-    grid-template-columns: 214.5px 214.5px 214.5px 214.5px;
+    grid-template-columns: 429px 429px;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     text-align: center;
@@ -111,8 +107,6 @@ hr {
 }
 
 
-
-
 #lipid_distribution .container {
     display: grid;
     grid-template-columns: 50px 269px 269px 269px;
@@ -127,8 +121,6 @@ hr {
         "Phospholipid a ı l";
     text-align: center;
 }
-
-
 
 #ldl_subfractions .main_header {
     background: rgba(235, 234, 234, 0.95);
@@ -157,20 +149,6 @@ hr {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0.5em;
-}
-
-#ldl_subfractions .total .range_container {
-    display: grid;
-    grid-template-columns: 310px 196px 313px;
-    align-items: center;
-    justify-content: left;
-}
-
-#periodic_assessment .row {
-    display: grid;
-    grid-template-columns: 211px 313px;
-    align-items: center;
-    justify-content: left;
 }
 
 #lipid_distribution .main_header {

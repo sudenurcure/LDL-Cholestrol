@@ -11,10 +11,6 @@
     }
 }
 
-hr {
-    margin: 0rem 0.7rem 1rem -0.1rem;
-}
-
 .headers {
     background: rgba(235, 234, 234, 0.95);
     size: 20px;
@@ -56,17 +52,17 @@ hr {
     padding-bottom: 0.5em;
 }
 
-#profile_page .firstpage .box_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 #profile_page .secrow .range_container {
     display: grid;
     grid-template-columns: 357px 318px 233px;
     align-items: center;
     justify-content: left;
+}
+
+#profile_page .box_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #profile_page .secrow .box_container {
@@ -76,14 +72,39 @@ hr {
     justify-content: left;
 }
 
-#profile_page .firstpage .thirdrow {
+#ıdk .thirdrow {
     width: 30%;
     padding-left: 0px;
     display: grid;
-    grid-template-columns: 214.5px 214.5px 214.5px 214.5px;
+    grid-template-columns: 437px 437px;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
+}
+
+#ıdk .thirdrow .subheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 213px;
     text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#ıdk .box_container {
+    display: grid;
+    grid-template-columns: 357px 318px 233px;
+    align-items: center;
+    justify-content: left;
+}
+
+#ıdk .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
 }
 
 #profile_page .firstpage .mainheader {
@@ -111,8 +132,6 @@ hr {
 }
 
 
-
-
 #lipid_distribution .container {
     display: grid;
     grid-template-columns: 50px 269px 269px 269px;
@@ -127,8 +146,6 @@ hr {
         "Phospholipid a ı l";
     text-align: center;
 }
-
-
 
 #ldl_subfractions .main_header {
     background: rgba(235, 234, 234, 0.95);
@@ -157,20 +174,6 @@ hr {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0.5em;
-}
-
-#ldl_subfractions .total .range_container {
-    display: grid;
-    grid-template-columns: 310px 196px 313px;
-    align-items: center;
-    justify-content: left;
-}
-
-#periodic_assessment .row {
-    display: grid;
-    grid-template-columns: 211px 313px;
-    align-items: center;
-    justify-content: left;
 }
 
 #lipid_distribution .main_header {

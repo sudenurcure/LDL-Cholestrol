@@ -238,3 +238,46 @@ class TESTS:
         "Optimal": "< 1400",
         "Risk": "> 2000"
     }
+
+    L1PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(98, 568)),
+        "Optimal": "< 140",
+        "Risk": "> 190"
+    }
+
+    L2PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(47, 427)),
+        "Optimal": "< 150",
+        "Risk": "> 200"
+    }
+    
+    L3PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(51, 500)),
+        "Optimal": "< 190",
+        "Risk": "> 260"
+    }
+
+    L4PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(77, 578)),
+        "Optimal": "< 230",
+        "Risk": "> 330"
+    }
+
+    L5PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(86, 616)),
+        "Optimal": "< 290",
+        "Risk": "> 400"
+    }
+
+    L6PN = {
+        "Unit": "nmol/L",
+        "RoM": list(range(91, 816)),
+        "Optimal": "< 300",
+        "Risk": "> 450"
+    }
+    

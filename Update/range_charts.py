@@ -14,6 +14,7 @@ def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
     fig, ax = plt.subplots(figsize=(6, 0.5))
 
     ax.imshow(range_values, cmap='RdYlGn_r', aspect='auto', extent=[x_min, x_max, 0, 1], alpha=0.7)
+
     ax.plot(x, y, color='black')
 
     ax.get_yaxis().set_visible(False)

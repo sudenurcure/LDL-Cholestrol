@@ -82,7 +82,7 @@ hr {
 
 #profile_page .secrow .box_container {
     display: grid;
-    grid-template-columns: 357px 239px 296px;
+    grid-template-columns: 357px 239px 226px;
     align-items: center;
     justify-content: left;
 }

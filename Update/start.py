@@ -1,11 +1,6 @@
 import pandas as pd 
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib
-from range_charts import t_chart
-from save_plot import insert_plot as IP
-import ReferenceDictionary as dd
 import Subfractions
+import main_creation
 
 from NMRLipoprotein import NMRLipoprotein as NMR
 
@@ -16,11 +11,15 @@ maindata.drop(["Directory","name","date","type"],axis = 1, inplace=True)
 for i in range(0,len(maindata)):
     df = maindata.iloc[i] #Put one patient in a dataframe.
     patient= NMR(df) #Classify results
-    #print(patient.HDL_sub_tg)
+    dfdict = df.to_dict()
+
     Subfractions.Cholestrol(patient)
     Subfractions.FreeCholestrol(patient)
     Subfractions.Phospolipid(patient)
     Subfractions.Triglycerides(patient)
+
+    main_creation.conditional(df,dfdict)
+    main_creation.calculated_LFLC(df)
 
 
 

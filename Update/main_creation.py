@@ -83,7 +83,6 @@ def conditional(df, dfdict):
     output.close()
 
 def calculated_LFLC(df):
-    #attribute = getattr(dd.TESTS(),"LFLC")
     db = dd.TESTS.LFLC
     cLFLC = round(df["LDFC [mg/dL]"]/df["LDCH [mg/dL]"],2)
 
@@ -96,3 +95,12 @@ def calculated_LFLC(df):
     IP(plot_file, fig)
 
     cbox(plot_file.replace(".png",""), cLFLC, "noref")
+
+def calculated_HFHC(df):
+    db = dd.TESTS.HFHC
+    cHFHC = round(df["HDFC [mg/dL]"]/df["HDCH [mg/dL]"],2)
+
+    if eval(f"{cHFHC} {db['Optimal']}"):
+        cbox("HFHC", cHFHC, False)
+    else:
+        cbox("HFHC", cHFHC, True)

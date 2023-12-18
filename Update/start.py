@@ -1,7 +1,7 @@
 import pandas as pd 
 import Subfractions
 import main_creation
-
+from periodic_assessments import periodic
 from NMRLipoprotein import NMRLipoprotein as NMR
 
 maindata = pd.read_csv("lipo_result_file_1.csv")
@@ -20,6 +20,8 @@ for i in range(0,len(maindata)):
 
     main_creation.conditional(df,dfdict)
     main_creation.calculated_LFLC(df)
+
+    periodic(df)
 
 
 

@@ -1,14 +1,21 @@
-@media all {
-    .page-break {
+@media print {
+    #printPageButton {
         display: none;
     }
-}
 
-@media print {
     .page-break {
         display: block;
         page-break-before: always;
     }
+
+    @page {
+        size: A4;
+        margin-left: 0.3cm;
+        margin-right: 0.3cm;
+        margin-top: auto;
+    }
+
+
 }
 
 hr {
@@ -75,14 +82,14 @@ hr {
 
 #profile_page .secrow .range_container {
     display: grid;
-    grid-template-columns: 357px 239px 296px;
+    grid-template-columns: 357px 141px 296px;
     align-items: center;
     justify-content: left;
 }
 
 #profile_page .secrow .box_container {
     display: grid;
-    grid-template-columns: 357px 239px 226px;
+    grid-template-columns: 357px 141px 226px;
     align-items: center;
     justify-content: left;
 }
@@ -126,7 +133,7 @@ hr {
 
 #lipid_distribution .container {
     display: grid;
-    grid-template-columns: 50px 269px 269px 269px;
+    grid-template-columns: 50px 280px 280px 280px;
     grid-template-rows: 40px 269px 269px 269px 269px;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -245,7 +252,7 @@ hr {
     size: 20px;
     width: auto;
     font-weight: bold;
-    margin: -2.5em 2px -2em 0px;
+    margin: -2.5em 2px 0em 0px;
     padding-top: 0.5em;
     padding-left: 15px;
     padding-bottom: 0.5em;

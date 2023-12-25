@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 from save_plot import  insert_plot as IP
 
 def table(df,where):
@@ -10,6 +11,10 @@ def table(df,where):
     ax.bar(df.index, df['highest'] - df['lowest'], color='blue', bottom=df['lowest'], alpha=0.3)
 
     ax.set_ylabel('mg/dL', fontsize=12)
+    ax.tick_params(axis='both', which='major', labelsize=14)
+
+    ax.yaxis.set_major_locator(MaxNLocator(integer=True))
+    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 
     plt.grid(True)
     IP(f"{test}.png",plt, f"{lp}_SUBF")
@@ -71,9 +76,9 @@ def Phospolipid(patient):
     vldl_range = pd.DataFrame({"lowest": [1,1,1,2,0],"highest": [32,15,14,13,5]}, index = vldl.index)
 
     hdl_df, ldl_df, vldl_df = join(hdl, hdl_range, ldl,ldl_range, vldl, vldl_range)
-    table(hdl_df,"HDL phospolipid")
-    table(ldl_df,"LDL phospolipid")
-    table(vldl_df,"VLDL phospolipid")
+    table(hdl_df,"HDL phospholipid")
+    table(ldl_df,"LDL phospholipid")
+    table(vldl_df,"VLDL phospholipid")
 
 def Triglycerides(patient):
     hdl = patient.HDL_sub_tg

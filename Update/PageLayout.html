@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMR Lipoprotein</title>
-    <link rel="stylesheet" type="text/css" href="v3_css.css" />
+    <link rel="stylesheet" type="text/css" href="pagestyle.css" />
 </head>
 
 <body>
+    <div><button id="printPageButton" onClick="window.print()">Print the results
+        </button></div>
     <section id="profile_page">
         <!--Has TPTG_box, TPCH_box, LDCH, HDCH_box, TPA1_box, TPA2_box, TPAB_box, TBPN;
         TBPN, LDCH range
@@ -250,7 +252,7 @@
                     <label for="ldlpn" , style="font-weight: bolder;font-size: large; padding-left: 10.5em;">LDL
                         Particle Number
                     </label>
-                    <img src="all_files/LDPL_box.png" style="width:80px;height:30px">
+                    <img src="all_files/LDPN_box.png" style="width:80px;height:30px">
                     <img src="all_files/LDPN.png" style="width:316px;height:70px" , id="ldlpn">
                 </div>
             </div>
@@ -287,29 +289,29 @@
             <div class="Chol" style=" writing-mode: vertical-lr;transform: rotate(180deg)">Cholesterol</div>
             <div class="Free-Chol" style="writing-mode: vertical-lr;transform: rotate(180deg)">Free Cholesterol</div>
             <div class="Phospholipid" style="writing-mode: vertical-lr;transform: rotate(180deg)">Phospholipid</div>
-            <div class="x"><img src="all_files/HDL_SUBF/triglycerides.png" alt="HDL triglycerides" width=269px
+            <div class="x"><img src="all_files/HDL_SUBF/triglycerides.png" alt="HDL triglycerides" width=280px
                     height=269px></div>
-            <div class="y"><img src="all_files/HDL_SUBF/chol.png" alt="HDL cholesterol" width=269px height=269px></div>
-            <div class="z"><img src="all_files/HDL_SUBF/freechol.png" alt="HDL free cholesterol" width=269px
+            <div class="y"><img src="all_files/HDL_SUBF/chol.png" alt="HDL cholesterol" width=280px height=269px></div>
+            <div class="z"><img src="all_files/HDL_SUBF/freechol.png" alt="HDL free cholesterol" width=280px
                     height=269px></div>
-            <div class="a"><img src="all_files/HDL_SUBF/phospholipid.png" alt="HDL phospholipid" width=269px
+            <div class="a"><img src="all_files/HDL_SUBF/phospholipid.png" alt="HDL phospholipid" width=280px
                     height=269px>
             </div>
-            <div class="f"><img src="all_files/LDL_SUBF/triglycerides.png" alt="LDL triglycerides" width=269px
+            <div class="f"><img src="all_files/LDL_SUBF/triglycerides.png" alt="LDL triglycerides" width=280px
                     height=269px></div>
-            <div class="g"><img src="all_files/LDL_SUBF/chol.png" alt="LDL cholesterol" width=269px height=269px></div>
-            <div class="h"><img src="all_files/LDL_SUBF/freechol.png" alt="LDL free cholesterol" width=269px
+            <div class="g"><img src="all_files/LDL_SUBF/chol.png" alt="LDL cholesterol" width=280px height=269px></div>
+            <div class="h"><img src="all_files/LDL_SUBF/freechol.png" alt="LDL free cholesterol" width=280px
                     height=269px></div>
-            <div class="ı"><img src="all_files/LDL_SUBF/phospholipid.png" alt="LDL phospholipid" width=269px
+            <div class="ı"><img src="all_files/LDL_SUBF/phospholipid.png" alt="LDL phospholipid" width=280px
                     height=269px>
             </div>
-            <div class="i"><img src="all_files/VLDL_SUBF/triglycerides.png" alt="VLDL triglycerides" width=269px
+            <div class="i"><img src="all_files/VLDL_SUBF/triglycerides.png" alt="VLDL triglycerides" width=280px
                     height=269px></div>
-            <div class="j"><img src="all_files/VLDL_SUBF/chol.png" alt="VLDL cholesterol" width=269px height=269px>
+            <div class="j"><img src="all_files/VLDL_SUBF/chol.png" alt="VLDL cholesterol" width=280px height=269px>
             </div>
-            <div class="k"><img src="all_files/VLDL_SUBF/freechol.png" alt="VLDL free cholesterol" width=269px
+            <div class="k"><img src="all_files/VLDL_SUBF/freechol.png" alt="VLDL free cholesterol" width=280px
                     height=269px></div>
-            <div class="l"><img src="all_files/VLDL_SUBF/phospholipid.png" alt="VLDL phospholipid" width=269px
+            <div class="l"><img src="all_files/VLDL_SUBF/phospholipid.png" alt="VLDL phospholipid" width=280px
                     height=269px></div>
 
         </div>
@@ -318,6 +320,7 @@
             <p>Shaded areas represent 95% range of model, black points represent patient results.</p>
         </div>
     </section>
+
     <!--
     <script>
         function Print() {

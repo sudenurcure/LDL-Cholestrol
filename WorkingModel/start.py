@@ -20,6 +20,7 @@ for i in range(0,len(maindata)):
 
     main_creation.conditional(df,dfdict)
     main_creation.calculated_LFLC(df)
+    main_creation.calculated_HFHC(df)
 
     periodic(df)
 

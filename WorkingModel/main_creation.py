@@ -62,7 +62,6 @@ def conditional(df, dfdict):
                 if attribute["Optimal"] is None and attribute["Risk"] is None: #check for no reference
                     cbox(usename, pval, "noref", unit)
                 elif attribute["Optimal"][2:].strip() == attribute["Risk"][2:].strip(): #check for one reference value
-                    condition = f"{pval} {attribute}"
                     if pval == attribute["Optimal"][2:].strip():
                         cbox(usename, pval, "not boolean", unit)
                     elif eval(f"{pval} {attribute['Optimal']}"): # pval > or < Optimal w
@@ -78,8 +77,13 @@ def conditional(df, dfdict):
                     fig = t_chart(df[test], optval, riskval, attribute["Optimal"] ,attribute["Risk"], constant) # or "Optimal" , "Risk" as line names
                     plot_file = f'{usename}.png'
                     IP(plot_file, fig)
-
                     cbox(usename, df[test], "noref", unit)
+                    """if eval(f"{df[test]} {attribute['Optimal']}"):
+                        cbox(usename, df[test], False, unit)
+                    elif eval(f"{df[test]} {attribute['Risk']}"):
+                        cbox(usename, df[test], True, unit)
+                    else:
+                        cbox(usename, df[test], "In between", unit)"""
     output.close()
 
 def calculated_LFLC(df):
@@ -93,6 +97,13 @@ def calculated_LFLC(df):
     fig = t_chart(cLFLC, optval, riskval, db["Optimal"] ,db["Risk"], constant)
     plot_file = 'LFLC.png'
     IP(plot_file, fig)
+
+    """if eval(f"{cLFLC} {db['Optimal']}"):
+        cbox(plot_file.replace(".png",""), cLFLC, False)
+    elif eval(f"{cLFLC} {db['Risk']}"):
+        cbox(plot_file.replace(".png",""), cLFLC, True)
+    else:
+        cbox(plot_file.replace(".png",""), cLFLC, "In between")"""
 
     cbox(plot_file.replace(".png",""), cLFLC, "noref")
 

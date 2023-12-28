@@ -1,0 +1,371 @@
+@media print {
+    #printPageButton {
+        display: none;
+    }
+
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    @page {
+        size: A4;
+        margin-left: 0.3cm;
+        margin-right: 0.3cm;
+        margin-top: auto;
+    }
+}
+
+hr {
+    margin: 0rem 0.7rem 1rem -0.1rem;
+}
+
+.headers {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+.ref {
+    font-size: 11px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.904);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: small;
+}
+
+#profile_page .firstpage .row {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 437px 437px;
+    grid-column-gap: 15px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#profile_page .firstpage .secrow {
+    width: 30%;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 899px;
+    grid-column-gap: 15px;
+    text-align: left;
+}
+
+#profile_page .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+}
+
+#profile_page .firstpage .box_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#profile_page .secrow .range_container {
+    display: grid;
+    grid-template-columns: 357px 141px 296px;
+    align-items: center;
+    justify-content: left;
+}
+
+#profile_page .secrow .box_container {
+    display: grid;
+    grid-template-columns: 357px 141px 226px;
+    align-items: center;
+    justify-content: left;
+    padding-bottom: 14px;
+}
+
+#profile_page .firstpage .mainheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 899px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#profile_page .firstpage .subheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 213px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+
+
+#second_page .mainheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 899px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#second_page .subheader {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 418px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+    font-size: 17px;
+}
+
+#second_page .thirdrow {
+    width: 30%;
+    padding-left: 15px;
+    display: grid;
+    grid-template-columns: 429px 402px;
+    grid-column-gap: 24px;
+    grid-row-gap: -12px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#second_page .box_container {
+    display: grid;
+    grid-template-columns: 134px 80px;
+    align-items: center;
+    justify-items: start;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#second_page .range_container {
+    display: grid;
+    grid-template-columns: 134px 80px 259px;
+    align-items: center;
+    justify-items: start;
+}
+
+#lipid_distribution .container {
+    display: grid;
+    grid-template-columns: 50px 280px 280px 280px;
+    grid-template-rows: 40px 269px 269px 269px 269px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". HDL LDL VLDL"
+        "TG x f i"
+        "Chol y g j"
+        "Free-Chol z h k"
+        "Phospholipid a ı l";
+    text-align: center;
+}
+
+
+
+#ldl_subfractions .main_header {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#ldl_subfractions .row {
+    width: 30%;
+    padding-left: 5px;
+    padding-bottom: 0.5em;
+    display: grid;
+    grid-template-columns: 437px 437px;
+    grid-column-gap: 15px;
+    text-align: left;
+}
+
+#ldl_subfractions .row .range_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+}
+
+#ldl_subfractions .total .range_container {
+    display: grid;
+    grid-template-columns: 310px 196px 313px;
+    align-items: center;
+    justify-content: left;
+}
+
+#periodic_assessment .row {
+    display: grid;
+    grid-template-columns: 211px 313px;
+    align-items: center;
+    justify-content: left;
+}
+
+#lipid_distribution .main_header {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: 286px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0.5em 2px 0.4em -2px;
+    padding-top: 0.5em;
+    padding-left: 2px;
+    padding-bottom: 0.5em;
+}
+
+#lipid_distribution .container .Free {
+    grid-area: Free;
+}
+
+#lipid_distribution .container .HDL {
+    grid-area: HDL;
+}
+
+#lipid_distribution .container .LDL {
+    grid-area: LDL;
+}
+
+#lipid_distribution .container .VLDL {
+    grid-area: VLDL;
+}
+
+#lipid_distribution .container .Table {
+    display: grid;
+    grid-template-columns: 269px 269px;
+    grid-template-rows: 269px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". Range";
+    grid-area: Table;
+}
+
+#lipid_distribution .container .HDL,
+.LDL,
+.VLDL {
+    background: rgba(235, 234, 234, 0.95);
+    size: 5px;
+    width: auto;
+    font-weight: bold;
+    margin: 0em 2px 0.5em -2px;
+    padding-top: 0.5em;
+    padding-left: 15px;
+    padding-bottom: 0.5em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#lipid_distribution .container .TG,
+.Chol,
+.Free-Chol,
+.Phospholipid {
+    background: rgba(235, 234, 234, 0.95);
+    size: 20px;
+    width: auto;
+    font-weight: bold;
+    margin: -2.5em 2px 0em 0px;
+    padding-top: 0.5em;
+    padding-left: 15px;
+    padding-bottom: 0.5em;
+    font-family: "Times New Roman", Times, serif;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+#lipid_distribution .container .Range {
+    grid-area: Range;
+}
+
+#lipid_distribution .container .TG {
+    grid-area: TG;
+}
+
+#lipid_distribution .container .Chol {
+    grid-area: Chol;
+}
+
+#lipid_distribution .container .Free-Chol {
+    grid-area: Free-Chol;
+}
+
+#lipid_distribution .container .Phospholipid {
+    grid-area: Phospholipid;
+}
+
+#lipid_distribution .container .x {
+    grid-area: x;
+}
+
+#lipid_distribution .container .y {
+    grid-area: y;
+}
+
+#lipid_distribution .container .z {
+    grid-area: z;
+}
+
+#lipid_distribution .container .a {
+    grid-area: a;
+}
+
+#lipid_distribution .container .f {
+    grid-area: f;
+}
+
+#lipid_distribution .container .g {
+    grid-area: g;
+}
+
+#lipid_distribution .container .h {
+    grid-area: h;
+}
+
+#lipid_distribution .container .ı {
+    grid-area: ı;
+}
+
+#lipid_distribution .container .i {
+    grid-area: i;
+}
+
+#lipid_distribution .container .j {
+    grid-area: j;
+}
+
+#lipid_distribution .container .k {
+    grid-area: k;
+}
+
+#lipid_distribution .container .l {
+    grid-area: l;
+}

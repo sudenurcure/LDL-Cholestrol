@@ -23,7 +23,7 @@ def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
     for limit, label in zip([lwst, bgst], [keylwst, keybgst]):
         ax.axvline(x=limit, color='black', linestyle='-', linewidth=1.5)
         ax.annotate(str(limit), xy =(limit, 0), 
-             xytext =(limit, -0.50), ha='center', va='center', fontsize = 14,
+             xytext =(limit, -0.55), ha='center', va='center', fontsize = 16,
              arrowprops = dict(facecolor ='black',headwidth=7, headlength=6))
 
     # Patient
@@ -32,24 +32,32 @@ def t_chart(patient, lwst, bgst, keylwst, keybgst, constant):
     ax.axvline(x=custom_value, color='red', linestyle='-', linewidth=linewidth)
 
     if patient < x_max and patient > x_min:
-        ax.annotate(str(patient), xy =(patient, 1), 
-            xytext =(patient, 1.45), ha='center', va='center', fontsize = 14,
-            arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
+        if patient < x_min+(lwst-x_min)/4:
+            ax.annotate(str(patient), xy =(patient, 1), 
+                xytext =(patient, 1.5), ha='left', va='center', fontsize = 16,
+                arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
+        elif patient > x_max-(x_max-bgst)/4:
+            ax.annotate(str(patient), xy =(patient, 1), 
+                xytext =(patient, 1.5), ha='right', va='center', fontsize = 16,
+                arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
+        else:
+            ax.annotate(str(patient), xy =(patient, 1), 
+                xytext =(patient, 1.5), ha='center', va='center', fontsize = 16,
+                arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
     elif patient <= x_min:
-        ax.annotate(str(patient), xy =(x_min + constant/25, 1), fontsize = 14,
-            xytext =(x_min + constant/25, 1.45), ha='center', va='center',
+        ax.annotate(str(patient), xy =(x_min + constant/25, 1), fontsize = 16,
+            xytext =(x_min + constant/25, 1.5), ha='left', va='center',
             arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
     else:
-        ax.annotate(str(patient), xy =(x_max - constant/25, 1), fontsize = 14,
-                xytext =(x_max - constant/25, 1.45), ha='center', va='center',
+        ax.annotate(str(patient), xy =(x_max - constant/25, 1), fontsize = 16,
+                xytext =(x_max - constant/25, 1.5), ha='right', va='center',
                 arrowprops = dict(facecolor ='red',headwidth=7, headlength=6))
 
-    #plt.show()
     return plt
 
 def trial():
     constant = 2 * (abs(27 - 20)) / 3
-    t_chart(7, 20, 27, "<", ">", constant)
+    t_chart(30.66, 20, 27, "<", ">", constant).show()
 
 #trial()
 

@@ -4,7 +4,7 @@ from range_charts import t_chart
 from save_plot import insert_plot as IP
 
 def conditional(df, dfdict):    
-    output = open("problem_output.txt","w")
+    #output = open("problem_output.txt","w")
 
     for test , pval in dfdict.items():
         #get name and unit of the test seperately
@@ -20,7 +20,8 @@ def conditional(df, dfdict):
         try:
             attribute = getattr(dd.TESTS(),usename)
         except:
-            output.write(f"{test} is not in tests dictionary.\n")
+            #output.write(f"{test} is not in tests dictionary.\n")
+            pass
         else:
             try:
                     attribute["Optimal"]
@@ -84,7 +85,7 @@ def conditional(df, dfdict):
                         cbox(usename, df[test], True, unit)
                     else:
                         cbox(usename, df[test], "In between", unit)"""
-    output.close()
+    #output.close()
 
 def calculated_LFLC(df):
     db = dd.TESTS.LFLC

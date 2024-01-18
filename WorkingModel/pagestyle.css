@@ -34,6 +34,8 @@ hr {
 
 .ref {
     font-size: 11px;
+    color: #008000;
+    font-weight: bold;
 }
 
 .footer {

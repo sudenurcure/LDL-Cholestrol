@@ -214,22 +214,22 @@ class TESTS:
     TPA1 = {
         "Unit": "mg/dL",
         "RoM": list(range(112, 218)),
-        "Optimal": None,
-        "Risk": None
+        "Optimal": "< 104",
+        "Risk": "> 225"
     }
 
     TPA2 = {
         "Unit": "mg/dL",
         "RoM": list(range(24, 49)),
-        "Optimal": None,
-        "Risk": None
+        "Optimal": "< 26",
+        "Risk": "> 51"
     }
 
     TPAB = {
         "Unit": "mg/dL",
         "RoM": list(range(48, 160)),
-        "Optimal": None,
-        "Risk": None
+        "Optimal": "< 60",
+        "Risk": "> 144"
     }
 
     TBPN = {
